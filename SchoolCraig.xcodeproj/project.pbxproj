@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02B3746B19F965B700B3605A /* SCPostingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02B3746A19F965B700B3605A /* SCPostingTableViewCell.xib */; };
+		02B3746D19F965E000B3605A /* SCPostingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B3746C19F965E000B3605A /* SCPostingTableViewCell.swift */; };
 		FC5C3EEF19F947C500AE2AAA /* SCPosting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EEE19F947C500AE2AAA /* SCPosting.swift */; };
 		FC5C3EF419F9487600AE2AAA /* SCDesignStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EF319F9487600AE2AAA /* SCDesignStore.swift */; };
 		FCF8204319F8B9850015E3A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF8204219F8B9850015E3A6 /* AppDelegate.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02B3746A19F965B700B3605A /* SCPostingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCPostingTableViewCell.xib; sourceTree = "<group>"; };
+		02B3746C19F965E000B3605A /* SCPostingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPostingTableViewCell.swift; sourceTree = "<group>"; };
 		FC5C3EEE19F947C500AE2AAA /* SCPosting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCPosting.swift; path = Models/SCPosting.swift; sourceTree = "<group>"; };
 		FC5C3EF319F9487600AE2AAA /* SCDesignStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCDesignStore.swift; path = Stores/SCDesignStore.swift; sourceTree = "<group>"; };
 		FCF8203D19F8B9850015E3A6 /* SchoolCraig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolCraig.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +75,8 @@
 		FC5C3EEC19F946BC00AE2AAA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				02B3746C19F965E000B3605A /* SCPostingTableViewCell.swift */,
+				02B3746A19F965B700B3605A /* SCPostingTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02B3746B19F965B700B3605A /* SCPostingTableViewCell.xib in Resources */,
 				FCF8204819F8B9850015E3A6 /* Main.storyboard in Resources */,
 				FCF8204D19F8B9850015E3A6 /* LaunchScreen.xib in Resources */,
 				FCF8204A19F8B9850015E3A6 /* Images.xcassets in Resources */,
@@ -262,6 +269,7 @@
 				FCF8204519F8B9850015E3A6 /* ViewController.swift in Sources */,
 				FCF8204319F8B9850015E3A6 /* AppDelegate.swift in Sources */,
 				FC5C3EF419F9487600AE2AAA /* SCDesignStore.swift in Sources */,
+				02B3746D19F965E000B3605A /* SCPostingTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
