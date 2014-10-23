@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC5C3EEF19F947C500AE2AAA /* SCPosting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EEE19F947C500AE2AAA /* SCPosting.swift */; };
+		FC5C3EF419F9487600AE2AAA /* SCDesignStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EF319F9487600AE2AAA /* SCDesignStore.swift */; };
 		FCF8204319F8B9850015E3A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF8204219F8B9850015E3A6 /* AppDelegate.swift */; };
 		FCF8204519F8B9850015E3A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF8204419F8B9850015E3A6 /* ViewController.swift */; };
 		FCF8204819F8B9850015E3A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCF8204619F8B9850015E3A6 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC5C3EEE19F947C500AE2AAA /* SCPosting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCPosting.swift; path = Models/SCPosting.swift; sourceTree = "<group>"; };
+		FC5C3EF319F9487600AE2AAA /* SCDesignStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCDesignStore.swift; path = Stores/SCDesignStore.swift; sourceTree = "<group>"; };
 		FCF8203D19F8B9850015E3A6 /* SchoolCraig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolCraig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF8204119F8B9850015E3A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCF8204219F8B9850015E3A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +60,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC5C3EEB19F946B200AE2AAA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC5C3EEE19F947C500AE2AAA /* SCPosting.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		FC5C3EEC19F946BC00AE2AAA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		FC5C3EED19F946C400AE2AAA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		FC5C3EF019F947D200AE2AAA /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		FC5C3EF219F9484B00AE2AAA /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				FC5C3EF319F9487600AE2AAA /* SCDesignStore.swift */,
+			);
+			name = Stores;
+			sourceTree = "<group>";
+		};
 		FCF8203419F8B9850015E3A6 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +120,11 @@
 			children = (
 				FCF8204219F8B9850015E3A6 /* AppDelegate.swift */,
 				FCF8204419F8B9850015E3A6 /* ViewController.swift */,
+				FC5C3EF019F947D200AE2AAA /* API */,
+				FC5C3EEB19F946B200AE2AAA /* Models */,
+				FC5C3EEC19F946BC00AE2AAA /* Views */,
+				FC5C3EF219F9484B00AE2AAA /* Stores */,
+				FC5C3EED19F946C400AE2AAA /* Controllers */,
 				FCF8204619F8B9850015E3A6 /* Main.storyboard */,
 				FCF8204919F8B9850015E3A6 /* Images.xcassets */,
 				FCF8204B19F8B9850015E3A6 /* LaunchScreen.xib */,
@@ -212,8 +258,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC5C3EEF19F947C500AE2AAA /* SCPosting.swift in Sources */,
 				FCF8204519F8B9850015E3A6 /* ViewController.swift in Sources */,
 				FCF8204319F8B9850015E3A6 /* AppDelegate.swift in Sources */,
+				FC5C3EF419F9487600AE2AAA /* SCDesignStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +453,7 @@
 				FCF8205E19F8B9850015E3A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCF8205F19F8B9850015E3A6 /* Build configuration list for PBXNativeTarget "SchoolCraigTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +462,7 @@
 				FCF8206119F8B9850015E3A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
