@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		FC5C3EEF19F947C500AE2AAA /* SCPosting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EEE19F947C500AE2AAA /* SCPosting.swift */; };
 		FC5C3EF419F9487600AE2AAA /* SCDesignStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EF319F9487600AE2AAA /* SCDesignStore.swift */; };
+		FC5C3EFA19F9581200AE2AAA /* SCNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EF919F9581200AE2AAA /* SCNetworkRequest.swift */; };
+		FC5C3EFC19F9587800AE2AAA /* SCNetworkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EFB19F9587800AE2AAA /* SCNetworkStore.swift */; };
+		FCF1B4B219FB0CB900C38D83 /* SCPostingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF1B4B119FB0CB900C38D83 /* SCPostingRequest.swift */; };
 		FCF8204319F8B9850015E3A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF8204219F8B9850015E3A6 /* AppDelegate.swift */; };
 		FCF8204519F8B9850015E3A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF8204419F8B9850015E3A6 /* ViewController.swift */; };
 		FCF8204819F8B9850015E3A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCF8204619F8B9850015E3A6 /* Main.storyboard */; };
@@ -30,6 +33,9 @@
 /* Begin PBXFileReference section */
 		FC5C3EEE19F947C500AE2AAA /* SCPosting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCPosting.swift; path = Models/SCPosting.swift; sourceTree = "<group>"; };
 		FC5C3EF319F9487600AE2AAA /* SCDesignStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCDesignStore.swift; path = Stores/SCDesignStore.swift; sourceTree = "<group>"; };
+		FC5C3EF919F9581200AE2AAA /* SCNetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCNetworkRequest.swift; path = API/SCNetworkRequest.swift; sourceTree = "<group>"; };
+		FC5C3EFB19F9587800AE2AAA /* SCNetworkStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCNetworkStore.swift; path = Stores/SCNetworkStore.swift; sourceTree = "<group>"; };
+		FCF1B4B119FB0CB900C38D83 /* SCPostingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCPostingRequest.swift; path = API/SCPostingRequest.swift; sourceTree = "<group>"; };
 		FCF8203D19F8B9850015E3A6 /* SchoolCraig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolCraig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF8204119F8B9850015E3A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCF8204219F8B9850015E3A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +91,8 @@
 		FC5C3EF019F947D200AE2AAA /* API */ = {
 			isa = PBXGroup;
 			children = (
+				FC5C3EF919F9581200AE2AAA /* SCNetworkRequest.swift */,
+				FCF1B4B119FB0CB900C38D83 /* SCPostingRequest.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -93,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				FC5C3EF319F9487600AE2AAA /* SCDesignStore.swift */,
+				FC5C3EFB19F9587800AE2AAA /* SCNetworkStore.swift */,
 			);
 			name = Stores;
 			sourceTree = "<group>";
@@ -258,9 +267,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC5C3EFA19F9581200AE2AAA /* SCNetworkRequest.swift in Sources */,
+				FCF1B4B219FB0CB900C38D83 /* SCPostingRequest.swift in Sources */,
 				FC5C3EEF19F947C500AE2AAA /* SCPosting.swift in Sources */,
 				FCF8204519F8B9850015E3A6 /* ViewController.swift in Sources */,
 				FCF8204319F8B9850015E3A6 /* AppDelegate.swift in Sources */,
+				FC5C3EFC19F9587800AE2AAA /* SCNetworkStore.swift in Sources */,
 				FC5C3EF419F9487600AE2AAA /* SCDesignStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
