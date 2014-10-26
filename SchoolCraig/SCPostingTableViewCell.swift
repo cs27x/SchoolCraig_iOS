@@ -10,5 +10,13 @@ import Foundation
 import UIKit
 
 class SCPostingTableViewCell : UITableViewCell {
+	@IBOutlet var TitleLabel: UILabel!
+	@IBOutlet var PriceLabel: UILabel!
+	@IBOutlet var PosterInfoLabel: UILabel!
+	@IBOutlet var DescriptionLabel: UILabel!
+	
+	func updateCell() {
+		
+	}
 
 }
