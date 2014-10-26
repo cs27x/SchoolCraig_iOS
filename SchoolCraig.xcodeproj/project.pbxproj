@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC29C28619FD72E500BF99BB /* SCUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29C28519FD72E500BF99BB /* SCUser.swift */; };
+		FC29C28819FD73C300BF99BB /* SCCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29C28719FD73C300BF99BB /* SCCategory.swift */; };
 		FC5C3EEF19F947C500AE2AAA /* SCPosting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EEE19F947C500AE2AAA /* SCPosting.swift */; };
 		FC5C3EF419F9487600AE2AAA /* SCDesignStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EF319F9487600AE2AAA /* SCDesignStore.swift */; };
 		FC5C3EFA19F9581200AE2AAA /* SCNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EF919F9581200AE2AAA /* SCNetworkRequest.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC29C28519FD72E500BF99BB /* SCUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCUser.swift; path = Models/SCUser.swift; sourceTree = "<group>"; };
+		FC29C28719FD73C300BF99BB /* SCCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCCategory.swift; path = Models/SCCategory.swift; sourceTree = "<group>"; };
 		FC5C3EEE19F947C500AE2AAA /* SCPosting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCPosting.swift; path = Models/SCPosting.swift; sourceTree = "<group>"; };
 		FC5C3EF319F9487600AE2AAA /* SCDesignStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCDesignStore.swift; path = Stores/SCDesignStore.swift; sourceTree = "<group>"; };
 		FC5C3EF919F9581200AE2AAA /* SCNetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCNetworkRequest.swift; path = API/SCNetworkRequest.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				FC5C3EEE19F947C500AE2AAA /* SCPosting.swift */,
+				FC29C28519FD72E500BF99BB /* SCUser.swift */,
+				FC29C28719FD73C300BF99BB /* SCCategory.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -268,9 +274,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC5C3EFA19F9581200AE2AAA /* SCNetworkRequest.swift in Sources */,
+				FC29C28819FD73C300BF99BB /* SCCategory.swift in Sources */,
 				FCF1B4B219FB0CB900C38D83 /* SCPostingRequest.swift in Sources */,
 				FC5C3EEF19F947C500AE2AAA /* SCPosting.swift in Sources */,
 				FCF8204519F8B9850015E3A6 /* ViewController.swift in Sources */,
+				FC29C28619FD72E500BF99BB /* SCUser.swift in Sources */,
 				FCF8204319F8B9850015E3A6 /* AppDelegate.swift in Sources */,
 				FC5C3EFC19F9587800AE2AAA /* SCNetworkStore.swift in Sources */,
 				FC5C3EF419F9487600AE2AAA /* SCDesignStore.swift in Sources */,
