@@ -15,7 +15,7 @@ class SCPostingTableViewCell : UITableViewCell {
 	@IBOutlet var PosterInfoLabel: UILabel!
 	@IBOutlet var DescriptionLabel: UILabel!
 	
-	func updateCell() {
+	func updateCell(SCPosting) {
 		
 	}
 
