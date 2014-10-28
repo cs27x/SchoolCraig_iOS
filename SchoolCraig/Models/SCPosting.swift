@@ -8,6 +8,28 @@
 
 import UIKit
 
-class SCPosting: NSObject {
-   
+class SCPosting {
+    
+    var title: String
+    
+    var details: String
+    
+    var author: SCUser
+    
+    var category: SCCategory
+    
+    var price: Double
+    
+    var creationDate: NSDate
+
+    init(title: String, details: String, author: SCUser, category: SCCategory, price: Double, creationDate: NSDate) {
+        self.title = title
+        self.details = details
+        self.author = author;
+        self.category = category
+        self.price = price
+        self.creationDate = creationDate
+    }
+
+    
 }
