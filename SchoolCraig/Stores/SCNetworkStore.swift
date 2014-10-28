@@ -24,13 +24,13 @@ class SCNetworkStore {
     }
     
     
-    func handleRequest<T>(request: SCNetworkRequest<T>) {
+    func handleRequest<T: SCNetworkRequest>(request: T) {
         // Submit the request here.
 
         var url = NSURL(string: self.rootPath + request.path)
         var urlRequest = NSMutableURLRequest(URL: url)
 
-        urlRequest.HTTPMethod = request.method
+        urlRequest.HTTPMethod = request.method.toRaw()
         
 
         var requestHandler = {(data: NSData!, response: NSURLResponse!, error:NSError!) -> () in
@@ -38,11 +38,19 @@ class SCNetworkStore {
                 request.onError!(_error)
             }
             else {
+                // TODO: Add error handling!
                 var json: AnyObject? =
                     NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments, error: nil)
                 
-                var objects = request.parseJsonObject(json!)
-                request.onSuccess!(objects)
+                // Check if this is an array of objects.
+                if let arr = json! as? NSArray {
+                    var objects = request.parseArray(arr)
+                    request.onSuccess!(objects)
+                }
+                else {
+                    var object = request.parse(json!)
+                    request.onSuccess!([object])
+                }
 
             }
         }
@@ -51,5 +59,5 @@ class SCNetworkStore {
                                                          completionHandler: requestHandler)
     }
 
-    
+
 }

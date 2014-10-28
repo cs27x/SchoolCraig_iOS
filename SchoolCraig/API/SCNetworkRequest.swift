@@ -8,24 +8,25 @@
 
 import Foundation
 
-class SCNetworkRequest <T> {
-
-    var method: String
-
-    var path: String
+protocol SCNetworkRequest {
     
-    var onSuccess: ((Array<T>) -> ())?
-
-    var onError: ((NSError) -> ())?
+    typealias T
     
-    init(method: String, path: String) {
-        self.method = method
-        self.path = path
-    }
+    var method: SCNetworkMethod { get }
     
+    var path: String { get }
     
-    func parseJsonObject(json: AnyObject) -> Array<T> {
-        fatalError("parseJsonObject must be overridden.")
-    }
+    var onSuccess: ((Array<T>) -> ())? { get set }
+    
+    var onError: ((NSError) -> ())? { get set }
+    
+    // JSON -> Object
+    func parse(json: AnyObject) -> T
+    func parseArray(json: NSArray) -> Array<T>
+    
+    // Object -> JSON
+    func serialize(object: T) -> AnyObject
+    func serializeArray(objects: Array<T>) -> NSArray
     
 }
+
