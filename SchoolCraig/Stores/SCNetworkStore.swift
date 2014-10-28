@@ -45,11 +45,16 @@ class SCNetworkStore {
                 // Check if this is an array of objects.
                 if let arr = json! as? NSArray {
                     var objects = request.parseArray(arr)
-                    request.onSuccess!(objects)
+                    
+                    self.onMainQueue {
+                        request.onSuccess!(objects)
+                    }
                 }
                 else {
                     var object = request.parse(json!)
-                    request.onSuccess!([object])
+                    self.onMainQueue {
+                        request.onSuccess!([object])
+                    }
                 }
 
             }
@@ -60,4 +65,11 @@ class SCNetworkStore {
     }
 
 
+    func onMainQueue(exp: () -> ()) {
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            exp()
+        })
+    }
+    
+    
 }
