@@ -10,12 +10,16 @@ import Foundation
 import UIKit
 
 class SCPostingTableViewCell : UITableViewCell {
-	@IBOutlet var TitleLabel: UILabel!
-	@IBOutlet var PriceLabel: UILabel!
-	@IBOutlet var PosterInfoLabel: UILabel!
-	@IBOutlet var DescriptionLabel: UILabel!
+	@IBOutlet var titleLabel: UILabel!
+	@IBOutlet var priceLabel: UILabel!
+	@IBOutlet var posterInfoLabel: UILabel!
+	@IBOutlet var descriptionLabel: UILabel!
 	
-	func updateCell(SCPosting) {
+	func updateCell(post: SCPosting) {
+		titleLabel.text = post.title
+		priceLabel.text = "$ \(post.price)"
+		//PosterInfoLabel = post.author.
+		descriptionLabel.text = post.details
 		
 	}
 
