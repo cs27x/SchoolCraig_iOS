@@ -17,7 +17,7 @@
 		FCB4A7AF19FFF79D00C2EAA3 /* SCLocalNetworkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB4A7AE19FFF79D00C2EAA3 /* SCLocalNetworkStore.swift */; };
 		FCB4A7B119FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB4A7B019FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift */; };
 		FCC6913019FDCE450016771D /* SCNetworkMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC6912F19FDCE450016771D /* SCNetworkMethod.swift */; };
-		FCF1B4B219FB0CB900C38D83 /* SCPostingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF1B4B119FB0CB900C38D83 /* SCPostingRequest.swift */; };
+		FCF1B4B219FB0CB900C38D83 /* SCAllPostingsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF1B4B119FB0CB900C38D83 /* SCAllPostingsRequest.swift */; };
 		FCF8204319F8B9850015E3A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF8204219F8B9850015E3A6 /* AppDelegate.swift */; };
 		FCF8204519F8B9850015E3A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF8204419F8B9850015E3A6 /* ViewController.swift */; };
 		FCF8204819F8B9850015E3A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCF8204619F8B9850015E3A6 /* Main.storyboard */; };
@@ -47,7 +47,7 @@
 		FCB4A7AE19FFF79D00C2EAA3 /* SCLocalNetworkStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCLocalNetworkStore.swift; path = Stores/SCLocalNetworkStore.swift; sourceTree = "<group>"; };
 		FCB4A7B019FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCNetworkStoreProtocol.swift; path = API/SCNetworkStoreProtocol.swift; sourceTree = "<group>"; };
 		FCC6912F19FDCE450016771D /* SCNetworkMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCNetworkMethod.swift; path = API/SCNetworkMethod.swift; sourceTree = "<group>"; };
-		FCF1B4B119FB0CB900C38D83 /* SCPostingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCPostingRequest.swift; path = API/SCPostingRequest.swift; sourceTree = "<group>"; };
+		FCF1B4B119FB0CB900C38D83 /* SCAllPostingsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCAllPostingsRequest.swift; path = API/SCAllPostingsRequest.swift; sourceTree = "<group>"; };
 		FCF8203D19F8B9850015E3A6 /* SchoolCraig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolCraig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF8204119F8B9850015E3A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCF8204219F8B9850015E3A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 			children = (
 				FC5C3EF919F9581200AE2AAA /* SCNetworkRequest.swift */,
 				FCC6912F19FDCE450016771D /* SCNetworkMethod.swift */,
-				FCF1B4B119FB0CB900C38D83 /* SCPostingRequest.swift */,
+				FCF1B4B119FB0CB900C38D83 /* SCAllPostingsRequest.swift */,
 				FC470EBF1A01EC8700BBA103 /* post.all.json */,
 			);
 			name = API;
@@ -290,7 +290,7 @@
 				FCC6913019FDCE450016771D /* SCNetworkMethod.swift in Sources */,
 				FC29C28819FD73C300BF99BB /* SCCategory.swift in Sources */,
 				FCB4A7AF19FFF79D00C2EAA3 /* SCLocalNetworkStore.swift in Sources */,
-				FCF1B4B219FB0CB900C38D83 /* SCPostingRequest.swift in Sources */,
+				FCF1B4B219FB0CB900C38D83 /* SCAllPostingsRequest.swift in Sources */,
 				FC5C3EEF19F947C500AE2AAA /* SCPosting.swift in Sources */,
 				FCB4A7B119FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift in Sources */,
 				FCF8204519F8B9850015E3A6 /* ViewController.swift in Sources */,

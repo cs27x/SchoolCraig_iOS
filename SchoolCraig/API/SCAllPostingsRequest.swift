@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SCPostingRequest: SCNetworkRequest {
+class SCAllPostingsRequest: SCNetworkRequest {
     
     var method = SCNetworkMethod.GET
     
@@ -24,12 +24,18 @@ class SCPostingRequest: SCNetworkRequest {
     }
     
     func parse(json: AnyObject) -> SCPosting {
-        return SCPosting(title: "",
-                         details: "",
-                         author: SCUser(email: ""),
+        var title = json["title"] as String
+        var details = json["description"] as String
+        var author = SCUser(email: json["author"] as String)
+        var price = (json["price"] as NSNumber).doubleValue
+        var date = NSDate(timeIntervalSince1970:json["date"] as NSNumber)
+        
+        return SCPosting(title: title,
+                         details: details,
+                         author: author,
                          category: SCCategory.Dorm,
-                         price: 0,
-                         creationDate: NSDate())
+                         price: price,
+                         creationDate: date)
     }
 
     

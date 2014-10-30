@@ -21,7 +21,8 @@ class SCLocalNetworkStore: SCNetworkStoreProtocol {
     
     func handleRequest<T: SCNetworkRequest>(request: T) {
         if waitTimeInSeconds > 0 {
-            dispatch_after(waitTimeInSeconds * NSEC_PER_SEC, dispatch_get_main_queue()) { () -> Void in
+            var time = dispatch_time(DISPATCH_TIME_NOW, Int64(waitTimeInSeconds * NSEC_PER_SEC))
+            dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
                 self.executeRequest(request)
             }
         }
