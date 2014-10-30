@@ -16,6 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        var networkStore = SCLocalNetworkStore(waitTimeInSeconds: 3)
+        
+        var request = SCAllPostingsRequest()
+        request.onSuccess = {(var array) -> () in
+            print(array)
+        }
+        
+        request.onError = {(val error) -> () in
+            print(error)
+        }
+        
+        networkStore.handleRequest(request)
+        
         return true
     }
 

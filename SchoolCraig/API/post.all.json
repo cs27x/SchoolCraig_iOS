@@ -1,0 +1,36 @@
+{
+    "data": [
+             {
+                 "title": "Fridgerator",
+                 "description": "Graduating next year and would like to sell my fridge.",
+                 "date": 1414644539,
+                 "category": 0,
+                 "price": 45,
+                 "author": "brendan.d.mcnamara@vanderbilt.edu"
+             },
+             {
+                 "title": "Futon",
+                 "description": "Great condition, barely used. You should definitely buy this thing because it is so so awesome",
+                 "date": 1414644539,
+                 "category": 0,
+                 "price": 60,
+                 "author": "brendan.d.mcnamara@vanderbilt.edu"
+             },
+             {
+                 "title": "Futon",
+                 "description": "Great condition, barely used. You should definitely buy this thing because it is so so awesome",
+                 "date": 1414644539,
+                 "category": 0,
+                 "price": 60,
+                 "author": "brendan.d.mcnamara@vanderbilt.edu"
+             },
+             {
+                 "title": "Futon",
+                 "description": "Great condition, barely used. You should definitely buy this thing because it is so so awesome",
+                 "date": 1414644539,
+                 "category": 0,
+                 "price": 60,
+                 "author": "brendan.d.mcnamara@vanderbilt.edu"
+             }
+         ]
+}
