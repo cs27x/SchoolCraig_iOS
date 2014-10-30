@@ -12,12 +12,16 @@ class SCPostingRequest: SCNetworkRequest {
     
     var method = SCNetworkMethod.GET
     
-    var path = "/posts"
+    var path = "/post/all"
     
     var onSuccess: ((Array<SCPosting>) -> ())?
     
     var onError: ((NSError) -> ())?
     
+    
+    init() {
+    
+    }
     
     func parse(json: AnyObject) -> SCPosting {
         return SCPosting(title: "",

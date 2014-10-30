@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SCNetworkStore {
+class SCNetworkStore: SCNetworkStoreProtocol {
    
     var rootPath = "blah.com"
     
@@ -38,7 +38,7 @@ class SCNetworkStore {
                 request.onError!(_error)
             }
             else {
-                // TODO: Add error handling!
+                // TODO (brendan): Add error handling!
                 var json: AnyObject? =
                     NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments, error: nil)
                 

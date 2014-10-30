@@ -29,4 +29,3 @@ protocol SCNetworkRequest {
     func serializeArray(objects: Array<T>) -> NSArray
     
 }
-
