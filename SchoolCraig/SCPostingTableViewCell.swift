@@ -18,9 +18,8 @@ class SCPostingTableViewCell : UITableViewCell {
 	func updateCell(post: SCPosting) {
 		titleLabel.text = post.title
 		priceLabel.text = "$ \(post.price)"
-		//PosterInfoLabel = post.author.
+		posterInfoLabel.text = "\(post.auther)"
 		descriptionLabel.text = post.details
-		
 	}
 
 }
