@@ -28,7 +28,8 @@ class SCAllPostingsRequest: SCNetworkRequest {
         var details = json["description"] as String
         var author = SCUser(email: json["author"] as String)
         var price = (json["price"] as NSNumber).doubleValue
-        var date = NSDate(timeIntervalSince1970:json["date"] as NSNumber)
+        var timestamp = json["date"] as NSNumber
+        var date = NSDate(timeIntervalSince1970: Double(timestamp))
         
         return SCPosting(title: title,
                          details: details,

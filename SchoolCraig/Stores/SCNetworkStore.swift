@@ -27,10 +27,11 @@ class SCNetworkStore: SCNetworkStoreProtocol {
     func handleRequest<T: SCNetworkRequest>(request: T) {
         // Submit the request here.
 
+        // TODO (brendan) why is NSURL evaluating to an optional?
         var url = NSURL(string: self.rootPath + request.path)
-        var urlRequest = NSMutableURLRequest(URL: url)
+        var urlRequest = NSMutableURLRequest(URL: url!)
 
-        urlRequest.HTTPMethod = request.method.toRaw()
+        urlRequest.HTTPMethod = request.method.rawValue
         
 
         var requestHandler = {(data: NSData!, response: NSURLResponse!, error:NSError!) -> () in

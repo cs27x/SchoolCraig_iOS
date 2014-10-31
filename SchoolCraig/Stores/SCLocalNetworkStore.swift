@@ -43,9 +43,10 @@ class SCLocalNetworkStore: SCNetworkStoreProtocol {
         var path = NSBundle.mainBundle().pathForResource(fileName, ofType: "json")
         
         if let _path = path {
-            var dataAtPath = NSData.dataWithContentsOfFile(_path, options: nil, error: nil)
+            var dataAtPath = NSData(contentsOfFile: _path)
+            // TODO (brendan): Don't force unwrap the dataAtPath value.
             var serializedData =
-                NSJSONSerialization.JSONObjectWithData(dataAtPath, options: nil, error: nil) as NSDictionary?
+                NSJSONSerialization.JSONObjectWithData(dataAtPath!, options: nil, error: nil) as NSDictionary?
 
             if let _data = serializedData {
 
