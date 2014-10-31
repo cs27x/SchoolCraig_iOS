@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var request = SCAllPostingsRequest()
         
         request.onSuccess = {(var array: Array<SCPosting>) -> () in
-            print(array)
+           // print(array)
         }
         
         request.onError = {(var error: NSError) -> () in

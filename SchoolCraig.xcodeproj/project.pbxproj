@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		025C269E1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C269D1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift */; };
+		025C26A01A041A2000F8EFF9 /* SCPostingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C269F1A041A2000F8EFF9 /* SCPostingTableViewController.swift */; };
 		02A82C1A19FFFA09005BC021 /* SCPostingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A82C1819FFFA09005BC021 /* SCPostingTableViewCell.swift */; };
 		02A82C1B19FFFA09005BC021 /* SCPostingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A82C1919FFFA09005BC021 /* SCPostingTableViewCell.xib */; };
 		FC29C28619FD72E500BF99BB /* SCUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29C28519FD72E500BF99BB /* SCUser.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		025C269D1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPostingTableViewDatasource.swift; sourceTree = "<group>"; };
+		025C269F1A041A2000F8EFF9 /* SCPostingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPostingTableViewController.swift; sourceTree = "<group>"; };
 		02A82C1819FFFA09005BC021 /* SCPostingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPostingTableViewCell.swift; sourceTree = "<group>"; };
 		02A82C1919FFFA09005BC021 /* SCPostingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCPostingTableViewCell.xib; sourceTree = "<group>"; };
 		FC29C28519FD72E500BF99BB /* SCUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCUser.swift; path = Models/SCUser.swift; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 				FC5C3EEE19F947C500AE2AAA /* SCPosting.swift */,
 				FC29C28519FD72E500BF99BB /* SCUser.swift */,
 				FC29C28719FD73C300BF99BB /* SCCategory.swift */,
+				025C269D1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -95,8 +100,9 @@
 		FC5C3EEC19F946BC00AE2AAA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				02A82C1819FFFA09005BC021 /* SCPostingTableViewCell.swift */,
 				02A82C1919FFFA09005BC021 /* SCPostingTableViewCell.xib */,
+				02A82C1819FFFA09005BC021 /* SCPostingTableViewCell.swift */,
+				025C269F1A041A2000F8EFF9 /* SCPostingTableViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -301,7 +307,9 @@
 				FCF1B4B219FB0CB900C38D83 /* SCAllPostingsRequest.swift in Sources */,
 				FC5C3EEF19F947C500AE2AAA /* SCPosting.swift in Sources */,
 				FCB4A7B119FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift in Sources */,
+				025C26A01A041A2000F8EFF9 /* SCPostingTableViewController.swift in Sources */,
 				FCF8204519F8B9850015E3A6 /* ViewController.swift in Sources */,
+				025C269E1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift in Sources */,
 				FC29C28619FD72E500BF99BB /* SCUser.swift in Sources */,
 				FCF8204319F8B9850015E3A6 /* AppDelegate.swift in Sources */,
 				FC5C3EFC19F9587800AE2AAA /* SCNetworkStore.swift in Sources */,
