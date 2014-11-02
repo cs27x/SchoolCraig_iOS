@@ -63,5 +63,6 @@ class SCRequestTests: XCTestCase {
         XCTAssertTrue(callbackIsCalled, "Expect onSuccess to be called for login request")
     }
     
-    
+    func testCreatePostingRequest() {
+    }
 }
