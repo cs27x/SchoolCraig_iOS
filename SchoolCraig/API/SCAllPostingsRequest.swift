@@ -24,6 +24,7 @@ class SCAllPostingsRequest: SCNetworkRequest {
     }
     
     func parse(json: AnyObject) -> SCPosting {
+        var id = json["id"] as String
         var title = json["title"] as String
         var details = json["description"] as String
         var author = SCUser(email: json["author"] as String)
@@ -31,7 +32,8 @@ class SCAllPostingsRequest: SCNetworkRequest {
         var timestamp = json["date"] as NSNumber
         var date = NSDate(timeIntervalSince1970: Double(timestamp))
         
-        return SCPosting(title: title,
+        return SCPosting(id: id,
+                         title: title,
                          details: details,
                          author: author,
                          category: SCCategory.Dorm,

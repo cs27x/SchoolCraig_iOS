@@ -10,6 +10,8 @@ import UIKit
 
 class SCPosting {
     
+    var id: String
+    
     var title: String
     
     var details: String
@@ -22,14 +24,22 @@ class SCPosting {
     
     var creationDate: NSDate
 
-    init(title: String, details: String, author: SCUser, category: SCCategory, price: Double, creationDate: NSDate) {
-        self.title = title
-        self.details = details
-        self.author = author;
-        self.category = category
-        self.price = price
-        self.creationDate = creationDate
-    }
+    init(id: String,
+         title: String,
+         details: String,
+         author: SCUser,
+         category: SCCategory,
+         price: Double,
+         creationDate: NSDate) {
+
+            self.id = id;
+            self.title = title
+            self.details = details
+            self.author = author;
+            self.category = category
+            self.price = price
+            self.creationDate = creationDate
+        }
 
     
 }
