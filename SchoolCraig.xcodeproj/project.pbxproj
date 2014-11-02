@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		025C269E1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C269D1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift */; };
+		025C26A01A041A2000F8EFF9 /* SCPostingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C269F1A041A2000F8EFF9 /* SCPostingTableViewController.swift */; };
+		02A82C1A19FFFA09005BC021 /* SCPostingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A82C1819FFFA09005BC021 /* SCPostingTableViewCell.swift */; };
+		02A82C1B19FFFA09005BC021 /* SCPostingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A82C1919FFFA09005BC021 /* SCPostingTableViewCell.xib */; };
+		02C224A91A06D4FC00D2C58C /* SCLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C224A81A06D4FC00D2C58C /* SCLoginViewController.swift */; };
 		FC0EBD6F1A06B68B007C2E1E /* SCRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0EBD6E1A06B68B007C2E1E /* SCRequestTests.swift */; };
 		FC0EBD701A06B6B3007C2E1E /* SCNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EF919F9581200AE2AAA /* SCNetworkRequest.swift */; };
 		FC0EBD711A06B6B6007C2E1E /* SCNetworkMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC6912F19FDCE450016771D /* SCNetworkMethod.swift */; };
@@ -20,10 +25,6 @@
 		FC0EBD791A06B6F7007C2E1E /* SCLocalNetworkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB4A7AE19FFF79D00C2EAA3 /* SCLocalNetworkStore.swift */; };
 		FC0EBD7A1A06B700007C2E1E /* SCNetworkStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB4A7B019FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift */; };
 		FC0EBD7C1A06BEE1007C2E1E /* SCCreatePostingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0EBD7B1A06BEE1007C2E1E /* SCCreatePostingRequest.swift */; };
-		025C269E1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C269D1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift */; };
-		025C26A01A041A2000F8EFF9 /* SCPostingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C269F1A041A2000F8EFF9 /* SCPostingTableViewController.swift */; };
-		02A82C1A19FFFA09005BC021 /* SCPostingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A82C1819FFFA09005BC021 /* SCPostingTableViewCell.swift */; };
-		02A82C1B19FFFA09005BC021 /* SCPostingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A82C1919FFFA09005BC021 /* SCPostingTableViewCell.xib */; };
 		FC29C28619FD72E500BF99BB /* SCUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29C28519FD72E500BF99BB /* SCUser.swift */; };
 		FC29C28819FD73C300BF99BB /* SCCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29C28719FD73C300BF99BB /* SCCategory.swift */; };
 		FC29E3271A0693EE00F6C144 /* user.login.json in Resources */ = {isa = PBXBuildFile; fileRef = FC29E3261A0693EE00F6C144 /* user.login.json */; };
@@ -55,12 +56,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FC0EBD6E1A06B68B007C2E1E /* SCRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCRequestTests.swift; sourceTree = "<group>"; };
-		FC0EBD7B1A06BEE1007C2E1E /* SCCreatePostingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCCreatePostingRequest.swift; path = API/SCCreatePostingRequest.swift; sourceTree = "<group>"; };
 		025C269D1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPostingTableViewDatasource.swift; sourceTree = "<group>"; };
 		025C269F1A041A2000F8EFF9 /* SCPostingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPostingTableViewController.swift; sourceTree = "<group>"; };
 		02A82C1819FFFA09005BC021 /* SCPostingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPostingTableViewCell.swift; sourceTree = "<group>"; };
 		02A82C1919FFFA09005BC021 /* SCPostingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCPostingTableViewCell.xib; sourceTree = "<group>"; };
+		02C224A81A06D4FC00D2C58C /* SCLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLoginViewController.swift; sourceTree = "<group>"; };
+		FC0EBD6E1A06B68B007C2E1E /* SCRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCRequestTests.swift; sourceTree = "<group>"; };
+		FC0EBD7B1A06BEE1007C2E1E /* SCCreatePostingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCCreatePostingRequest.swift; path = API/SCCreatePostingRequest.swift; sourceTree = "<group>"; };
 		FC29C28519FD72E500BF99BB /* SCUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCUser.swift; path = Models/SCUser.swift; sourceTree = "<group>"; };
 		FC29C28719FD73C300BF99BB /* SCCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCCategory.swift; path = Models/SCCategory.swift; sourceTree = "<group>"; };
 		FC29E3261A0693EE00F6C144 /* user.login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = user.login.json; path = API/user.login.json; sourceTree = "<group>"; };
@@ -119,7 +121,6 @@
 			children = (
 				02A82C1919FFFA09005BC021 /* SCPostingTableViewCell.xib */,
 				02A82C1819FFFA09005BC021 /* SCPostingTableViewCell.swift */,
-				025C269F1A041A2000F8EFF9 /* SCPostingTableViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -127,6 +128,8 @@
 		FC5C3EED19F946C400AE2AAA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				02C224A81A06D4FC00D2C58C /* SCLoginViewController.swift */,
+				025C269F1A041A2000F8EFF9 /* SCPostingTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				FC29C28619FD72E500BF99BB /* SCUser.swift in Sources */,
 				FCF8204319F8B9850015E3A6 /* AppDelegate.swift in Sources */,
 				FC5C3EFC19F9587800AE2AAA /* SCNetworkStore.swift in Sources */,
+				02C224A91A06D4FC00D2C58C /* SCLoginViewController.swift in Sources */,
 				FC5C3EF419F9487600AE2AAA /* SCDesignStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
