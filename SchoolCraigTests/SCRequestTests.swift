@@ -64,5 +64,34 @@ class SCRequestTests: XCTestCase {
     }
     
     func testCreatePostingRequest() {
+        var callbackIsCalled = false;
+        var newPosting = SCPosting("ABCDEFG",
+            "Fridgerator",
+            "Graduating next year and would like to sell my fridge.",
+            nil,
+            "brendan.d.mcnamara@vanderbilt.edu",
+            nil,
+        nil)
+        var request = SCCreatePostingRequest(newPosting)
+        
+        request.onSuccess = {(var userArray) -> () in
+            callbackIsCalled = true;
+            if let _userArray = userArray {
+                XCTAssertEqual(1, countElements(_userArray), "Array should contain 1 user")
+            }
+            else {
+                XCTFail("Array optional from create new posting request should not be nil optional")
+            }
+        }
+        
+        request.onError = {(var error) -> () in
+            callbackIsCalled = true;
+            XCTFail("create new posting request onError was executed: \(error)")
+        }
+        
+        var networkStore = SCLocalNetworkStore(waitTimeInSeconds: 0)
+        networkStore.handleRequest(request)
+        
+        XCTAssertTrue(callbackIsCalled, "Expect onSuccess to be called for creating new posting request")
     }
 }
