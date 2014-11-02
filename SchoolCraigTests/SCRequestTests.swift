@@ -65,23 +65,18 @@ class SCRequestTests: XCTestCase {
     
     func testCreatePostingRequest() {
         var callbackIsCalled = false;
-        var newPosting = SCPosting("ABCDEFG",
-            "Fridgerator",
-            "Graduating next year and would like to sell my fridge.",
-            nil,
-            "brendan.d.mcnamara@vanderbilt.edu",
-            nil,
-        nil)
-        var request = SCCreatePostingRequest(newPosting)
+        var newPosting = SCPosting(id: "ABCDEFG",
+            title: "Fridgerator",
+            details: "Graduating next year and would like to sell my fridge.",
+            author: SCUser(email: "brendan.d.mcnamara@vanderbilt.edu"),
+            category: SCCategory.Dorm,
+            price: 20.2,
+            creationDate: NSDate()
+            )
+        var request = SCCreatePostingRequest(posting: newPosting)
         
-        request.onSuccess = {(var userArray) -> () in
+        request.onSuccess = {(var postingArray) -> () in
             callbackIsCalled = true;
-            if let _userArray = userArray {
-                XCTAssertEqual(1, countElements(_userArray), "Array should contain 1 user")
-            }
-            else {
-                XCTFail("Array optional from create new posting request should not be nil optional")
-            }
         }
         
         request.onError = {(var error) -> () in
