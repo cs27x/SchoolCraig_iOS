@@ -41,5 +41,5 @@ class SCPosting {
             self.creationDate = creationDate
         }
 
-    
+
 }

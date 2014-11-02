@@ -10,6 +10,8 @@ import UIKit
 
 class SCCreatePostingRequest: SCNetworkRequest {
    
+    var posting: SCPosting
+    
     var method = SCNetworkMethod.POST
     
     var path = "/post"
@@ -18,16 +20,22 @@ class SCCreatePostingRequest: SCNetworkRequest {
     
     var onError: ((NSError) -> ())?
     
+    init(posting: SCPosting) {
+        self.posting = posting
+    }
+    
     
     func serialize(object: SCPosting) -> AnyObject {
         // TODO (brendan): Implement me!
         return []
     }
 
+    
     func serializeArray(objects: Array<SCPosting>) -> NSArray {
         // TODO (brendan): Implement me
         return []
     }
+    
     
     func parse(json: AnyObject) -> SCPosting {
         // TODO (brendan): This is copied code. Find a better
