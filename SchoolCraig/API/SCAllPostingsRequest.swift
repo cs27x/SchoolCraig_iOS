@@ -14,7 +14,7 @@ class SCAllPostingsRequest: SCNetworkRequest {
     
     var path = "/post/all"
     
-    var onSuccess: ((Array<SCPosting>) -> ())?
+    var onSuccess: ((Array<SCPosting>?) -> ())?
     
     var onError: ((NSError) -> ())?
     

@@ -18,8 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         var request = SCAllPostingsRequest()
         
-        request.onSuccess = {(var array: Array<SCPosting>) -> () in
-            print(array)
+        request.onSuccess = {(var array: Array<SCPosting>?) -> () in
+            if let _arr = array {
+                print(_arr)
+            }
+            
         }
         
         request.onError = {(var error: NSError) -> () in

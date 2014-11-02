@@ -16,7 +16,7 @@ protocol SCNetworkRequest {
     
     var path: String { get }
     
-    var onSuccess: ((Array<T>) -> ())? { get set }
+    var onSuccess: ((Array<T>?) -> ())? { get set }
     
     var onError: ((NSError) -> ())? { get set }
     
