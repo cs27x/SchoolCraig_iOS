@@ -16,17 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        var request = SCLoginRequest(email: "brendan.d.mcnamara@vanderbilt.edu",
-                                     password: "password")
-        
+        var request = SCAllPostingsRequest()
         request.onSuccess = {(var arr) -> () in
-            if let _arr = arr {
-                print (_arr[0])
-            }
-        }
-        
-        request.onError = {(var error) -> () in
-            print (error)
+            print(arr!)
         }
         
         

@@ -27,6 +27,8 @@ class SCAllPostingsRequest: SCNetworkRequest {
     func parse(json: AnyObject) -> SCPosting {
         var id = json["id"] as String
         var title = json["title"] as String
+        var category =
+            SCCategory(rawValue:(json["category"] as NSNumber).integerValue)!
         var details = json["description"] as String
         var author = SCUser(email: json["author"] as String)
         var price = (json["price"] as NSNumber).doubleValue
@@ -37,7 +39,7 @@ class SCAllPostingsRequest: SCNetworkRequest {
                          title: title,
                          details: details,
                          author: author,
-                         category: SCCategory.Dorm,
+                         category: category,
                          price: price,
                          creationDate: date)
     }
