@@ -16,12 +16,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7Mq-2j-uSU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7Mq-2j-uSU">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7Mq-2j-uSU" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="51n-NC-v4v"/>
+                            <constraint firstItem="7Mq-2j-uSU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="6Jr-ov-dIn"/>
+                            <constraint firstItem="7Mq-2j-uSU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="FeZ-z0-zUX"/>
+                            <constraint firstItem="7Mq-2j-uSU" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="KZX-GO-P5L"/>
+                            <constraint firstAttribute="bottom" secondItem="7Mq-2j-uSU" secondAttribute="bottom" id="Mzo-Ao-RDl"/>
+                            <constraint firstAttribute="trailing" secondItem="7Mq-2j-uSU" secondAttribute="trailing" id="gce-iO-mls"/>
+                            <constraint firstItem="7Mq-2j-uSU" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="nh6-I6-5XZ"/>
+                            <constraint firstAttribute="trailing" secondItem="7Mq-2j-uSU" secondAttribute="trailing" id="oCx-zd-u9L"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6Jr-ov-dIn"/>
+                                <exclude reference="KZX-GO-P5L"/>
+                                <exclude reference="Mzo-Ao-RDl"/>
+                                <exclude reference="oCx-zd-u9L"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="6Jr-ov-dIn"/>
+                                <include reference="KZX-GO-P5L"/>
+                                <include reference="Mzo-Ao-RDl"/>
+                                <include reference="oCx-zd-u9L"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="School Craig" id="9YO-7v-Yus"/>
                     <connections>
