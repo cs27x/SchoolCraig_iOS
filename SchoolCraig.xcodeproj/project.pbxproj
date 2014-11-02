@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		797E444B1A06EEDC0065702F /* SCAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E41632E1A06EAD300BA57F8 /* SCAPI.swift */; };
-		797E444D1A06F1130065702F /* post.json in Resources */ = {isa = PBXBuildFile; fileRef = 797E444C1A06F1130065702F /* post.json */; };
-		797E444E1A06F1300065702F /* post.json in Resources */ = {isa = PBXBuildFile; fileRef = 797E444C1A06F1130065702F /* post.json */; };
 		8E41632C1A06E83900BA57F8 /* SCLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29E3281A06988D00F6C144 /* SCLoginRequest.swift */; };
 		8E41632F1A06EAD300BA57F8 /* SCAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E41632E1A06EAD300BA57F8 /* SCAPI.swift */; };
 		8E4163301A06EBEA00BA57F8 /* SCCreatePostingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0EBD7B1A06BEE1007C2E1E /* SCCreatePostingRequest.swift */; };
@@ -56,7 +54,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		797E444C1A06F1130065702F /* post.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = post.json; path = API/post.json; sourceTree = "<group>"; };
 		8E41632E1A06EAD300BA57F8 /* SCAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCAPI.swift; path = API/SCAPI.swift; sourceTree = "<group>"; };
 		FC0EBD6E1A06B68B007C2E1E /* SCRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCRequestTests.swift; sourceTree = "<group>"; };
 		FC0EBD7B1A06BEE1007C2E1E /* SCCreatePostingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCCreatePostingRequest.swift; path = API/SCCreatePostingRequest.swift; sourceTree = "<group>"; };
@@ -129,7 +126,6 @@
 		FC5C3EF019F947D200AE2AAA /* API */ = {
 			isa = PBXGroup;
 			children = (
-				797E444C1A06F1130065702F /* post.json */,
 				8E41632E1A06EAD300BA57F8 /* SCAPI.swift */,
 				FC5C3EF919F9581200AE2AAA /* SCNetworkRequest.swift */,
 				FCC6912F19FDCE450016771D /* SCNetworkMethod.swift */,
@@ -299,7 +295,6 @@
 				FCF8204D19F8B9850015E3A6 /* LaunchScreen.xib in Resources */,
 				FCF8204A19F8B9850015E3A6 /* Images.xcassets in Resources */,
 				FC470EC11A01EC8700BBA103 /* post.all.json in Resources */,
-				797E444D1A06F1130065702F /* post.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +304,6 @@
 			files = (
 				FC0EBD741A06B6BE007C2E1E /* post.all.json in Resources */,
 				FC0EBD751A06B6C1007C2E1E /* user.login.json in Resources */,
-				797E444E1A06F1300065702F /* post.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

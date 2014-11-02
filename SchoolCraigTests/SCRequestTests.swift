@@ -60,7 +60,7 @@ class SCRequestTests: XCTestCase {
         var networkStore = SCLocalNetworkStore(waitTimeInSeconds: 0)
         networkStore.handleRequest(request)
         
-        XCTAssertTrue(callbackIsCalled, "Expect onSuccess to be called for login request")
+        XCTAssertTrue(callbackIsCalled, "Expect onSuccess to be called for posting request")
     }
     
     func testCreatePostingRequest() {
