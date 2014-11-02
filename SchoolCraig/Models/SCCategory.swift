@@ -8,11 +8,24 @@
 
 import Foundation
 
-enum SCCategory {
+enum SCCategory: Int {
     // These are temporary categories, may change
     // later.
-    case Kitchen
+    
+    case Kitchen = 0
 
-    case Dorm
+    case Dorm = 1
+    
+    func toString() -> String {
+        switch self {
+        case .Kitchen:
+            return "Kitchen"
+        case .Dorm:
+            return "Dorm"
+        default:
+            fatalError("Unknown Category type for toString method")
+        }
+    }
+
 
 }

@@ -47,8 +47,8 @@ public class SCPostingTableViewDataSource: NSObject, UITableViewDataSource {
 		var request = SCAllPostingsRequest()
 		var postsArray:[SCPosting] = []
 		
-		request.onSuccess = {(var array: Array<SCPosting>) -> () in
-			postsArray = array
+		request.onSuccess = {(var array: Array<SCPosting>?) -> () in
+			postsArray = array!
 			//print(array)
 		}
 		

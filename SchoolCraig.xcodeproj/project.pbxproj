@@ -7,12 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC0EBD6F1A06B68B007C2E1E /* SCRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0EBD6E1A06B68B007C2E1E /* SCRequestTests.swift */; };
+		FC0EBD701A06B6B3007C2E1E /* SCNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EF919F9581200AE2AAA /* SCNetworkRequest.swift */; };
+		FC0EBD711A06B6B6007C2E1E /* SCNetworkMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC6912F19FDCE450016771D /* SCNetworkMethod.swift */; };
+		FC0EBD721A06B6B9007C2E1E /* SCAllPostingsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF1B4B119FB0CB900C38D83 /* SCAllPostingsRequest.swift */; };
+		FC0EBD731A06B6BB007C2E1E /* SCLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29E3281A06988D00F6C144 /* SCLoginRequest.swift */; };
+		FC0EBD741A06B6BE007C2E1E /* post.all.json in Resources */ = {isa = PBXBuildFile; fileRef = FC470EBF1A01EC8700BBA103 /* post.all.json */; };
+		FC0EBD751A06B6C1007C2E1E /* user.login.json in Resources */ = {isa = PBXBuildFile; fileRef = FC29E3261A0693EE00F6C144 /* user.login.json */; };
+		FC0EBD761A06B6E0007C2E1E /* SCPosting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EEE19F947C500AE2AAA /* SCPosting.swift */; };
+		FC0EBD771A06B6E2007C2E1E /* SCUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29C28519FD72E500BF99BB /* SCUser.swift */; };
+		FC0EBD781A06B6E5007C2E1E /* SCCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29C28719FD73C300BF99BB /* SCCategory.swift */; };
+		FC0EBD791A06B6F7007C2E1E /* SCLocalNetworkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB4A7AE19FFF79D00C2EAA3 /* SCLocalNetworkStore.swift */; };
+		FC0EBD7A1A06B700007C2E1E /* SCNetworkStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB4A7B019FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift */; };
+		FC0EBD7C1A06BEE1007C2E1E /* SCCreatePostingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0EBD7B1A06BEE1007C2E1E /* SCCreatePostingRequest.swift */; };
 		025C269E1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C269D1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift */; };
 		025C26A01A041A2000F8EFF9 /* SCPostingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C269F1A041A2000F8EFF9 /* SCPostingTableViewController.swift */; };
 		02A82C1A19FFFA09005BC021 /* SCPostingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A82C1819FFFA09005BC021 /* SCPostingTableViewCell.swift */; };
 		02A82C1B19FFFA09005BC021 /* SCPostingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A82C1919FFFA09005BC021 /* SCPostingTableViewCell.xib */; };
 		FC29C28619FD72E500BF99BB /* SCUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29C28519FD72E500BF99BB /* SCUser.swift */; };
 		FC29C28819FD73C300BF99BB /* SCCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29C28719FD73C300BF99BB /* SCCategory.swift */; };
+		FC29E3271A0693EE00F6C144 /* user.login.json in Resources */ = {isa = PBXBuildFile; fileRef = FC29E3261A0693EE00F6C144 /* user.login.json */; };
+		FC29E3291A06988D00F6C144 /* SCLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29E3281A06988D00F6C144 /* SCLoginRequest.swift */; };
 		FC470EC11A01EC8700BBA103 /* post.all.json in Resources */ = {isa = PBXBuildFile; fileRef = FC470EBF1A01EC8700BBA103 /* post.all.json */; };
 		FC5C3EEF19F947C500AE2AAA /* SCPosting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EEE19F947C500AE2AAA /* SCPosting.swift */; };
 		FC5C3EF419F9487600AE2AAA /* SCDesignStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EF319F9487600AE2AAA /* SCDesignStore.swift */; };
@@ -27,7 +42,6 @@
 		FCF8204819F8B9850015E3A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCF8204619F8B9850015E3A6 /* Main.storyboard */; };
 		FCF8204A19F8B9850015E3A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCF8204919F8B9850015E3A6 /* Images.xcassets */; };
 		FCF8204D19F8B9850015E3A6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCF8204B19F8B9850015E3A6 /* LaunchScreen.xib */; };
-		FCF8205919F8B9850015E3A6 /* SchoolCraigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF8205819F8B9850015E3A6 /* SchoolCraigTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,12 +55,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC0EBD6E1A06B68B007C2E1E /* SCRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCRequestTests.swift; sourceTree = "<group>"; };
+		FC0EBD7B1A06BEE1007C2E1E /* SCCreatePostingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCCreatePostingRequest.swift; path = API/SCCreatePostingRequest.swift; sourceTree = "<group>"; };
 		025C269D1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPostingTableViewDatasource.swift; sourceTree = "<group>"; };
 		025C269F1A041A2000F8EFF9 /* SCPostingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPostingTableViewController.swift; sourceTree = "<group>"; };
 		02A82C1819FFFA09005BC021 /* SCPostingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPostingTableViewCell.swift; sourceTree = "<group>"; };
 		02A82C1919FFFA09005BC021 /* SCPostingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCPostingTableViewCell.xib; sourceTree = "<group>"; };
 		FC29C28519FD72E500BF99BB /* SCUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCUser.swift; path = Models/SCUser.swift; sourceTree = "<group>"; };
 		FC29C28719FD73C300BF99BB /* SCCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCCategory.swift; path = Models/SCCategory.swift; sourceTree = "<group>"; };
+		FC29E3261A0693EE00F6C144 /* user.login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = user.login.json; path = API/user.login.json; sourceTree = "<group>"; };
+		FC29E3281A06988D00F6C144 /* SCLoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCLoginRequest.swift; path = API/SCLoginRequest.swift; sourceTree = "<group>"; };
 		FC470EBF1A01EC8700BBA103 /* post.all.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = post.all.json; path = API/post.all.json; sourceTree = "<group>"; };
 		FC5C3EEE19F947C500AE2AAA /* SCPosting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCPosting.swift; path = Models/SCPosting.swift; sourceTree = "<group>"; };
 		FC5C3EF319F9487600AE2AAA /* SCDesignStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCDesignStore.swift; path = Stores/SCDesignStore.swift; sourceTree = "<group>"; };
@@ -65,7 +83,6 @@
 		FCF8204C19F8B9850015E3A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FCF8205219F8B9850015E3A6 /* SchoolCraigTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchoolCraigTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF8205719F8B9850015E3A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FCF8205819F8B9850015E3A6 /* SchoolCraigTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolCraigTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +136,11 @@
 			children = (
 				FC5C3EF919F9581200AE2AAA /* SCNetworkRequest.swift */,
 				FCC6912F19FDCE450016771D /* SCNetworkMethod.swift */,
+				FC0EBD7B1A06BEE1007C2E1E /* SCCreatePostingRequest.swift */,
 				FCF1B4B119FB0CB900C38D83 /* SCAllPostingsRequest.swift */,
+				FC29E3281A06988D00F6C144 /* SCLoginRequest.swift */,
 				FC470EBF1A01EC8700BBA103 /* post.all.json */,
+				FC29E3261A0693EE00F6C144 /* user.login.json */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -183,8 +203,8 @@
 		FCF8205519F8B9850015E3A6 /* SchoolCraigTests */ = {
 			isa = PBXGroup;
 			children = (
-				FCF8205819F8B9850015E3A6 /* SchoolCraigTests.swift */,
 				FCF8205619F8B9850015E3A6 /* Supporting Files */,
+				FC0EBD6E1A06B68B007C2E1E /* SCRequestTests.swift */,
 			);
 			path = SchoolCraigTests;
 			sourceTree = "<group>";
@@ -277,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC29E3271A0693EE00F6C144 /* user.login.json in Resources */,
 				02A82C1B19FFFA09005BC021 /* SCPostingTableViewCell.xib in Resources */,
 				FCF8204819F8B9850015E3A6 /* Main.storyboard in Resources */,
 				FCF8204D19F8B9850015E3A6 /* LaunchScreen.xib in Resources */,
@@ -289,6 +310,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC0EBD741A06B6BE007C2E1E /* post.all.json in Resources */,
+				FC0EBD751A06B6C1007C2E1E /* user.login.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +329,9 @@
 				FCB4A7AF19FFF79D00C2EAA3 /* SCLocalNetworkStore.swift in Sources */,
 				FCF1B4B219FB0CB900C38D83 /* SCAllPostingsRequest.swift in Sources */,
 				FC5C3EEF19F947C500AE2AAA /* SCPosting.swift in Sources */,
+				FC0EBD7C1A06BEE1007C2E1E /* SCCreatePostingRequest.swift in Sources */,
 				FCB4A7B119FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift in Sources */,
+				FC29E3291A06988D00F6C144 /* SCLoginRequest.swift in Sources */,
 				025C26A01A041A2000F8EFF9 /* SCPostingTableViewController.swift in Sources */,
 				FCF8204519F8B9850015E3A6 /* ViewController.swift in Sources */,
 				025C269E1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift in Sources */,
@@ -321,7 +346,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCF8205919F8B9850015E3A6 /* SchoolCraigTests.swift in Sources */,
+				FC0EBD791A06B6F7007C2E1E /* SCLocalNetworkStore.swift in Sources */,
+				FC0EBD761A06B6E0007C2E1E /* SCPosting.swift in Sources */,
+				FC0EBD781A06B6E5007C2E1E /* SCCategory.swift in Sources */,
+				FC0EBD721A06B6B9007C2E1E /* SCAllPostingsRequest.swift in Sources */,
+				FC0EBD711A06B6B6007C2E1E /* SCNetworkMethod.swift in Sources */,
+				FC0EBD771A06B6E2007C2E1E /* SCUser.swift in Sources */,
+				FC0EBD7A1A06B700007C2E1E /* SCNetworkStoreProtocol.swift in Sources */,
+				FC0EBD731A06B6BB007C2E1E /* SCLoginRequest.swift in Sources */,
+				FC0EBD6F1A06B68B007C2E1E /* SCRequestTests.swift in Sources */,
+				FC0EBD701A06B6B3007C2E1E /* SCNetworkRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
