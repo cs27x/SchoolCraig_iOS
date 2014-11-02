@@ -23,6 +23,7 @@ class SCAllPostingsRequest: SCNetworkRequest {
     
     }
     
+    
     func parse(json: AnyObject) -> SCPosting {
         var id = json["id"] as String
         var title = json["title"] as String
@@ -59,6 +60,7 @@ class SCAllPostingsRequest: SCNetworkRequest {
             return self.serialize(obj)
         }
     }
+    
     
 }
 
