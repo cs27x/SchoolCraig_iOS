@@ -1,6 +1,7 @@
 {
     "data": [
              {
+                 "id": "ABCDEFG",
                  "title": "Fridgerator",
                  "description": "Graduating next year and would like to sell my fridge.",
                  "date": 1414644539,
@@ -9,6 +10,7 @@
                  "author": "brendan.d.mcnamara@vanderbilt.edu"
              },
              {
+                 "id": "BCDEFGH",
                  "title": "Futon",
                  "description": "Great condition, barely used. You should definitely buy this thing because it is so so awesome",
                  "date": 1414644539,
@@ -17,6 +19,7 @@
                  "author": "brendan.d.mcnamara@vanderbilt.edu"
              },
              {
+                 "id": "CDEFGHI",
                  "title": "Futon",
                  "description": "Great condition, barely used. You should definitely buy this thing because it is so so awesome",
                  "date": 1414644539,
@@ -25,6 +28,7 @@
                  "author": "brendan.d.mcnamara@vanderbilt.edu"
              },
              {
+                 "id": "DEFGHIJ",
                  "title": "Futon",
                  "description": "Great condition, barely used. You should definitely buy this thing because it is so so awesome",
                  "date": 1414644539,

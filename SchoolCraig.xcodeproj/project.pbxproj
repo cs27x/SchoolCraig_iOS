@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FC29C28619FD72E500BF99BB /* SCUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29C28519FD72E500BF99BB /* SCUser.swift */; };
 		FC29C28819FD73C300BF99BB /* SCCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29C28719FD73C300BF99BB /* SCCategory.swift */; };
+		FC29E3271A0693EE00F6C144 /* user.login.json in Resources */ = {isa = PBXBuildFile; fileRef = FC29E3261A0693EE00F6C144 /* user.login.json */; };
 		FC470EC11A01EC8700BBA103 /* post.all.json in Resources */ = {isa = PBXBuildFile; fileRef = FC470EBF1A01EC8700BBA103 /* post.all.json */; };
 		FC5C3EEF19F947C500AE2AAA /* SCPosting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EEE19F947C500AE2AAA /* SCPosting.swift */; };
 		FC5C3EF419F9487600AE2AAA /* SCDesignStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EF319F9487600AE2AAA /* SCDesignStore.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		FC29C28519FD72E500BF99BB /* SCUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCUser.swift; path = Models/SCUser.swift; sourceTree = "<group>"; };
 		FC29C28719FD73C300BF99BB /* SCCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCCategory.swift; path = Models/SCCategory.swift; sourceTree = "<group>"; };
+		FC29E3261A0693EE00F6C144 /* user.login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = user.login.json; path = API/user.login.json; sourceTree = "<group>"; };
 		FC470EBF1A01EC8700BBA103 /* post.all.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = post.all.json; path = API/post.all.json; sourceTree = "<group>"; };
 		FC5C3EEE19F947C500AE2AAA /* SCPosting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCPosting.swift; path = Models/SCPosting.swift; sourceTree = "<group>"; };
 		FC5C3EF319F9487600AE2AAA /* SCDesignStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCDesignStore.swift; path = Stores/SCDesignStore.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				FCC6912F19FDCE450016771D /* SCNetworkMethod.swift */,
 				FCF1B4B119FB0CB900C38D83 /* SCAllPostingsRequest.swift */,
 				FC470EBF1A01EC8700BBA103 /* post.all.json */,
+				FC29E3261A0693EE00F6C144 /* user.login.json */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC29E3271A0693EE00F6C144 /* user.login.json in Resources */,
 				FCF8204819F8B9850015E3A6 /* Main.storyboard in Resources */,
 				FCF8204D19F8B9850015E3A6 /* LaunchScreen.xib in Resources */,
 				FCF8204A19F8B9850015E3A6 /* Images.xcassets in Resources */,
