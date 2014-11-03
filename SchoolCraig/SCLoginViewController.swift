@@ -54,18 +54,6 @@ class SCLoginViewController: UIViewController {
 		}
 	}
 	
-	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-		if (segue.identifier == "LoggedIn") {
-			print("segue")
-			
-		}
-	}
-	
-	override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
-		
-		return isValidLogin
-	}
-	
 	func validateInput() -> Bool {
 	
 		var success = true
