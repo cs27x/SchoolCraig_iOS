@@ -22,21 +22,25 @@ class SCLoginViewController: UIViewController {
 		super.init(coder: aDecoder)
 	}
 	
-	@IBAction func loginPressed(sender: AnyObject) {
+	@IBAction func loginPressed(sender: UIButton) {
 		isValidLogin = validateInput()
 		
-		var shouldSegue = false;
-		
 		if(isValidLogin) {
+		
+			sender.userInteractionEnabled = false;
+			sender.setTitle("Logging in....", forState: .Normal)
+			
 			var request = SCLoginRequest(email: usernameField.text, password: passwordField.text)
 			
 			request.onSuccess = {(var userArray) -> () in
 				self.performSegueWithIdentifier("LoggedIn", sender: self)
-				shouldSegue = true;
+				sender.userInteractionEnabled = true;
+				sender.setTitle("LOGIN", forState: .Normal)
+				self.usernameField.text = ""
+				self.passwordField.text = ""
 			}
 			
 			request.onError = {(var error) -> () in
-				shouldSegue = false;
 				var alertView = UIAlertView()
 				alertView.addButtonWithTitle("OK")
 				alertView.title = "Login Failed"
