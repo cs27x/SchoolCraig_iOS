@@ -10,6 +10,9 @@ import Foundation
 
 class SCAPI {
     
+    
+    //parsePosting
+    //Takes in JSON and marshalls data into SCPosting object
     class func parsePosting(json: AnyObject) -> SCPosting {
         var id = json["id"] as String
         var title = json["title"] as String
@@ -30,20 +33,32 @@ class SCAPI {
             creationDate: date)
     }
     
-    
+    //serializePosting
+    //Takes fields of SCPosting object and converts to JSON
     class func serializePosting(object: SCPosting) -> AnyObject {
-        return []
+        var id = object.id
+        var title = object.title
+        var category = NSNumber(integer: object.category.rawValue)
+        var details = object.details
+        var author = object.author
+        var price = NSNumber(double:object.price)
+        var timestamp = NSNumber(integer: Int(object.creationDate.timeIntervalSince1970))
+        
+        return ["id": id, "title": title, "category": category, "description": details,
+            "author": author, "price": price, "date": timestamp] as NSDictionary
     }
     
-    
+    //parseUser
+    //Takes in JSON and marshalls data into SCUser object
     class func parseUser(json: AnyObject) -> SCUser {
         return SCUser(email: json["email"] as String)
     }
     
-    
+    //serializeUser
+    //Takes fields of SCUser object and converts to JSON
     class func serializeUser(object: SCUser) -> AnyObject {
-        // TODO: Implement me!
-        return []
+        var email = object.email
+        return ["email": email] as NSDictionary
     }
     
 }

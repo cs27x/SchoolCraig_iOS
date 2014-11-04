@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		025C269E1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C269D1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift */; };
+		025C26A01A041A2000F8EFF9 /* SCPostingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C269F1A041A2000F8EFF9 /* SCPostingTableViewController.swift */; };
+		02A82C1A19FFFA09005BC021 /* SCPostingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A82C1819FFFA09005BC021 /* SCPostingTableViewCell.swift */; };
+		02A82C1B19FFFA09005BC021 /* SCPostingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A82C1919FFFA09005BC021 /* SCPostingTableViewCell.xib */; };
 		797E444B1A06EEDC0065702F /* SCAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E41632E1A06EAD300BA57F8 /* SCAPI.swift */; };
+		824D1CD31A086A260000C235 /* SCAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824D1CD21A086A260000C235 /* SCAPITests.swift */; };
 		8E41632C1A06E83900BA57F8 /* SCLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29E3281A06988D00F6C144 /* SCLoginRequest.swift */; };
 		8E41632F1A06EAD300BA57F8 /* SCAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E41632E1A06EAD300BA57F8 /* SCAPI.swift */; };
 		8E4163301A06EBEA00BA57F8 /* SCCreatePostingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0EBD7B1A06BEE1007C2E1E /* SCCreatePostingRequest.swift */; };
@@ -23,10 +28,6 @@
 		FC0EBD791A06B6F7007C2E1E /* SCLocalNetworkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB4A7AE19FFF79D00C2EAA3 /* SCLocalNetworkStore.swift */; };
 		FC0EBD7A1A06B700007C2E1E /* SCNetworkStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB4A7B019FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift */; };
 		FC0EBD7C1A06BEE1007C2E1E /* SCCreatePostingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0EBD7B1A06BEE1007C2E1E /* SCCreatePostingRequest.swift */; };
-		025C269E1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C269D1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift */; };
-		025C26A01A041A2000F8EFF9 /* SCPostingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C269F1A041A2000F8EFF9 /* SCPostingTableViewController.swift */; };
-		02A82C1A19FFFA09005BC021 /* SCPostingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A82C1819FFFA09005BC021 /* SCPostingTableViewCell.swift */; };
-		02A82C1B19FFFA09005BC021 /* SCPostingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A82C1919FFFA09005BC021 /* SCPostingTableViewCell.xib */; };
 		FC29C28619FD72E500BF99BB /* SCUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29C28519FD72E500BF99BB /* SCUser.swift */; };
 		FC29C28819FD73C300BF99BB /* SCCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29C28719FD73C300BF99BB /* SCCategory.swift */; };
 		FC29E3271A0693EE00F6C144 /* user.login.json in Resources */ = {isa = PBXBuildFile; fileRef = FC29E3261A0693EE00F6C144 /* user.login.json */; };
@@ -58,13 +59,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8E41632E1A06EAD300BA57F8 /* SCAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCAPI.swift; path = API/SCAPI.swift; sourceTree = "<group>"; };
-		FC0EBD6E1A06B68B007C2E1E /* SCRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCRequestTests.swift; sourceTree = "<group>"; };
-		FC0EBD7B1A06BEE1007C2E1E /* SCCreatePostingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCCreatePostingRequest.swift; path = API/SCCreatePostingRequest.swift; sourceTree = "<group>"; };
 		025C269D1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPostingTableViewDatasource.swift; sourceTree = "<group>"; };
 		025C269F1A041A2000F8EFF9 /* SCPostingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPostingTableViewController.swift; sourceTree = "<group>"; };
 		02A82C1819FFFA09005BC021 /* SCPostingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPostingTableViewCell.swift; sourceTree = "<group>"; };
 		02A82C1919FFFA09005BC021 /* SCPostingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCPostingTableViewCell.xib; sourceTree = "<group>"; };
+		824D1CD21A086A260000C235 /* SCAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCAPITests.swift; sourceTree = "<group>"; };
+		8E41632E1A06EAD300BA57F8 /* SCAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCAPI.swift; path = API/SCAPI.swift; sourceTree = "<group>"; };
+		FC0EBD6E1A06B68B007C2E1E /* SCRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCRequestTests.swift; sourceTree = "<group>"; };
+		FC0EBD7B1A06BEE1007C2E1E /* SCCreatePostingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCCreatePostingRequest.swift; path = API/SCCreatePostingRequest.swift; sourceTree = "<group>"; };
 		FC29C28519FD72E500BF99BB /* SCUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCUser.swift; path = Models/SCUser.swift; sourceTree = "<group>"; };
 		FC29C28719FD73C300BF99BB /* SCCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCCategory.swift; path = Models/SCCategory.swift; sourceTree = "<group>"; };
 		FC29E3261A0693EE00F6C144 /* user.login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = user.login.json; path = API/user.login.json; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			children = (
 				FCF8205619F8B9850015E3A6 /* Supporting Files */,
 				FC0EBD6E1A06B68B007C2E1E /* SCRequestTests.swift */,
+				824D1CD21A086A260000C235 /* SCAPITests.swift */,
 			);
 			path = SchoolCraigTests;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				FC0EBD781A06B6E5007C2E1E /* SCCategory.swift in Sources */,
 				FC0EBD721A06B6B9007C2E1E /* SCAllPostingsRequest.swift in Sources */,
 				FC0EBD711A06B6B6007C2E1E /* SCNetworkMethod.swift in Sources */,
+				824D1CD31A086A260000C235 /* SCAPITests.swift in Sources */,
 				FC0EBD771A06B6E2007C2E1E /* SCUser.swift in Sources */,
 				FC0EBD7A1A06B700007C2E1E /* SCNetworkStoreProtocol.swift in Sources */,
 				8E41632C1A06E83900BA57F8 /* SCLoginRequest.swift in Sources */,
