@@ -11,4 +11,16 @@ import UIKit
 
 class SCPostingTableViewCell : UITableViewCell {
 
+	@IBOutlet var titleLabel: UILabel!
+	@IBOutlet var priceLabel: UILabel!
+	@IBOutlet var posterInfoLabel: UILabel!
+	@IBOutlet var descriptionLabel: UILabel!
+	
+	func updateCellWithPost(post: SCPosting) {
+		titleLabel.text = post.title
+		priceLabel.text = "$\(post.price)0"
+		posterInfoLabel.text = "\(post.author.email)"
+		descriptionLabel.text = post.details
+	}
+
 }
