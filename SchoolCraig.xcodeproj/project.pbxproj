@@ -12,11 +12,15 @@
 		02A82C1A19FFFA09005BC021 /* SCPostingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A82C1819FFFA09005BC021 /* SCPostingTableViewCell.swift */; };
 		02A82C1B19FFFA09005BC021 /* SCPostingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A82C1919FFFA09005BC021 /* SCPostingTableViewCell.xib */; };
 		02C224A91A06D4FC00D2C58C /* SCLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C224A81A06D4FC00D2C58C /* SCLoginViewController.swift */; };
+		797E444B1A06EEDC0065702F /* SCAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E41632E1A06EAD300BA57F8 /* SCAPI.swift */; };
+		824D1CD31A086A260000C235 /* SCAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824D1CD21A086A260000C235 /* SCAPITests.swift */; };
+		8E41632C1A06E83900BA57F8 /* SCLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29E3281A06988D00F6C144 /* SCLoginRequest.swift */; };
+		8E41632F1A06EAD300BA57F8 /* SCAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E41632E1A06EAD300BA57F8 /* SCAPI.swift */; };
+		8E4163301A06EBEA00BA57F8 /* SCCreatePostingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0EBD7B1A06BEE1007C2E1E /* SCCreatePostingRequest.swift */; };
 		FC0EBD6F1A06B68B007C2E1E /* SCRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0EBD6E1A06B68B007C2E1E /* SCRequestTests.swift */; };
 		FC0EBD701A06B6B3007C2E1E /* SCNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EF919F9581200AE2AAA /* SCNetworkRequest.swift */; };
 		FC0EBD711A06B6B6007C2E1E /* SCNetworkMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC6912F19FDCE450016771D /* SCNetworkMethod.swift */; };
 		FC0EBD721A06B6B9007C2E1E /* SCAllPostingsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF1B4B119FB0CB900C38D83 /* SCAllPostingsRequest.swift */; };
-		FC0EBD731A06B6BB007C2E1E /* SCLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29E3281A06988D00F6C144 /* SCLoginRequest.swift */; };
 		FC0EBD741A06B6BE007C2E1E /* post.all.json in Resources */ = {isa = PBXBuildFile; fileRef = FC470EBF1A01EC8700BBA103 /* post.all.json */; };
 		FC0EBD751A06B6C1007C2E1E /* user.login.json in Resources */ = {isa = PBXBuildFile; fileRef = FC29E3261A0693EE00F6C144 /* user.login.json */; };
 		FC0EBD761A06B6E0007C2E1E /* SCPosting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EEE19F947C500AE2AAA /* SCPosting.swift */; };
@@ -61,6 +65,8 @@
 		02A82C1819FFFA09005BC021 /* SCPostingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPostingTableViewCell.swift; sourceTree = "<group>"; };
 		02A82C1919FFFA09005BC021 /* SCPostingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCPostingTableViewCell.xib; sourceTree = "<group>"; };
 		02C224A81A06D4FC00D2C58C /* SCLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLoginViewController.swift; sourceTree = "<group>"; };
+		824D1CD21A086A260000C235 /* SCAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCAPITests.swift; sourceTree = "<group>"; };
+		8E41632E1A06EAD300BA57F8 /* SCAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCAPI.swift; path = API/SCAPI.swift; sourceTree = "<group>"; };
 		FC0EBD6E1A06B68B007C2E1E /* SCRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCRequestTests.swift; sourceTree = "<group>"; };
 		FC0EBD7B1A06BEE1007C2E1E /* SCCreatePostingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCCreatePostingRequest.swift; path = API/SCCreatePostingRequest.swift; sourceTree = "<group>"; };
 		FC29C28519FD72E500BF99BB /* SCUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCUser.swift; path = Models/SCUser.swift; sourceTree = "<group>"; };
@@ -137,6 +143,7 @@
 		FC5C3EF019F947D200AE2AAA /* API */ = {
 			isa = PBXGroup;
 			children = (
+				8E41632E1A06EAD300BA57F8 /* SCAPI.swift */,
 				FC5C3EF919F9581200AE2AAA /* SCNetworkRequest.swift */,
 				FCC6912F19FDCE450016771D /* SCNetworkMethod.swift */,
 				FC0EBD7B1A06BEE1007C2E1E /* SCCreatePostingRequest.swift */,
@@ -208,6 +215,7 @@
 			children = (
 				FCF8205619F8B9850015E3A6 /* Supporting Files */,
 				FC0EBD6E1A06B68B007C2E1E /* SCRequestTests.swift */,
+				824D1CD21A086A260000C235 /* SCAPITests.swift */,
 			);
 			path = SchoolCraigTests;
 			sourceTree = "<group>";
@@ -333,6 +341,7 @@
 				FCF1B4B219FB0CB900C38D83 /* SCAllPostingsRequest.swift in Sources */,
 				FC5C3EEF19F947C500AE2AAA /* SCPosting.swift in Sources */,
 				FC0EBD7C1A06BEE1007C2E1E /* SCCreatePostingRequest.swift in Sources */,
+				8E41632F1A06EAD300BA57F8 /* SCAPI.swift in Sources */,
 				FCB4A7B119FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift in Sources */,
 				FC29E3291A06988D00F6C144 /* SCLoginRequest.swift in Sources */,
 				025C26A01A041A2000F8EFF9 /* SCPostingTableViewController.swift in Sources */,
@@ -352,13 +361,16 @@
 			files = (
 				FC0EBD791A06B6F7007C2E1E /* SCLocalNetworkStore.swift in Sources */,
 				FC0EBD761A06B6E0007C2E1E /* SCPosting.swift in Sources */,
+				8E4163301A06EBEA00BA57F8 /* SCCreatePostingRequest.swift in Sources */,
 				FC0EBD781A06B6E5007C2E1E /* SCCategory.swift in Sources */,
 				FC0EBD721A06B6B9007C2E1E /* SCAllPostingsRequest.swift in Sources */,
 				FC0EBD711A06B6B6007C2E1E /* SCNetworkMethod.swift in Sources */,
+				824D1CD31A086A260000C235 /* SCAPITests.swift in Sources */,
 				FC0EBD771A06B6E2007C2E1E /* SCUser.swift in Sources */,
 				FC0EBD7A1A06B700007C2E1E /* SCNetworkStoreProtocol.swift in Sources */,
-				FC0EBD731A06B6BB007C2E1E /* SCLoginRequest.swift in Sources */,
+				8E41632C1A06E83900BA57F8 /* SCLoginRequest.swift in Sources */,
 				FC0EBD6F1A06B68B007C2E1E /* SCRequestTests.swift in Sources */,
+				797E444B1A06EEDC0065702F /* SCAPI.swift in Sources */,
 				FC0EBD701A06B6B3007C2E1E /* SCNetworkRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
