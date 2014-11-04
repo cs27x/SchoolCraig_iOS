@@ -27,7 +27,7 @@ class SCCreatePostingRequest: SCNetworkRequest {
     
     func serialize(object: SCPosting) -> AnyObject {
         // TODO (brendan): Implement me!
-        return []
+        return SCAPI.serializePosting(object)
     }
 
     
@@ -38,25 +38,7 @@ class SCCreatePostingRequest: SCNetworkRequest {
     
     
     func parse(json: AnyObject) -> SCPosting {
-        // TODO (brendan): This is copied code. Find a better
-        // place for it.
-        var id = json["id"] as String
-        var title = json["title"] as String
-        var category =
-            SCCategory(rawValue:(json["category"] as NSNumber).integerValue)!
-        var details = json["description"] as String
-        var author = SCUser(email: json["author"] as String)
-        var price = (json["price"] as NSNumber).doubleValue
-        var timestamp = json["date"] as NSNumber
-        var date = NSDate(timeIntervalSince1970: Double(timestamp))
-        
-        return SCPosting(id: id,
-            title: title,
-            details: details,
-            author: author,
-            category: category,
-            price: price,
-            creationDate: date)
+        return SCAPI.parsePosting(json)
     }
     
     

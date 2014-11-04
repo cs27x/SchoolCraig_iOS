@@ -29,7 +29,8 @@ class SCLoginRequest: SCNetworkRequest {
     
     
     func parse(json: AnyObject) -> SCUser {
-        return SCUser(email: json["email"] as String)
+//        return SCUser(email: json["email"] as String)
+        return SCAPI.parseUser(json)
     }
     
     
@@ -42,7 +43,8 @@ class SCLoginRequest: SCNetworkRequest {
     
     func serialize(object: SCUser) -> AnyObject {
         // TODO: Implement me!
-        return []
+//        return []
+        return SCAPI.serializeUser(object);
     }
     
     func serializeArray(objects: Array<SCUser>) -> NSArray {
