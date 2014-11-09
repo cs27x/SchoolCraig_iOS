@@ -22,7 +22,6 @@ class SCPostingStore: SequenceType {
         
         
         func next() -> SCPosting? {
-            print("NEXT WAS CALLED")
             if items.isEmpty {
                 return nil
             }
@@ -61,8 +60,9 @@ class SCPostingStore: SequenceType {
     }
     
     
-    func fetchPosts(#success: (Array<SCPosting>) -> (), error: (NSError) -> ()) {
+    func fetchPosts(#success: () -> (), error: (NSError) -> ()) {
         // TODO: Implement me!
+        // NOTE: You should be using the network property of this class.
         // Use AllPostings request to get all the posts
 
         // Merge the posts that were retrieved by SCPostings into
@@ -71,6 +71,11 @@ class SCPostingStore: SequenceType {
     }
     
 
+    func createPost(posting: SCPosting, success: () -> (), error: (NSError) -> ()) {
+        // TODO: Implement me!
+    }
+    
+    
     func count() -> Int {
         return countElements(posts)
     }
@@ -86,14 +91,7 @@ class SCPostingStore: SequenceType {
     }
     
     
-    func createPost(#success: () -> (), error: () -> ()) {
-        // TODO: Implement me!
-    }
-    
-    
     internal func generate() -> SCPostingGenerator {
-        print("GENERATING\n")
-        print("\([SCPosting](posts.values))\n")
         return SCPostingGenerator(items: [SCPosting] (posts.values))
     }
     

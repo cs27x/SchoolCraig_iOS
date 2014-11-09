@@ -22,6 +22,7 @@ class SCPostingStoreTest: XCTestCase {
         XCTAssertEqual(posting, store[posting.id]!, "Posting should be added to the store.")
     }
 
+    
     func testIteration() {
         var store = SCPostingStore(network: SCLocalNetworkStore(waitTimeInSeconds: 0))
         var posting1 = SCTestFactory.createPostingWithId("12345")
@@ -52,5 +53,48 @@ class SCPostingStoreTest: XCTestCase {
         
         XCTAssertEqual(2, iterationCount, "Should have iterated the store 2 times.")
     }
+    
+    
+    func testFetchPosts() {
+        var store = SCPostingStore(network: SCLocalNetworkStore(waitTimeInSeconds: 0))
+        
+        var callbackCalled = false
+        var success = {() -> () in
+            callbackCalled = true
+            XCTAssertNotNil(store["123"], "Post with id 123 should exist.")
+            XCTAssertNotNil(store["124"], "Post with id 124 should exist.")
+            XCTAssertNotNil(store["125"], "Post with id 125 should exist.")
+            XCTAssertNotNil(store["126"], "Post with id 126 should exist.")
+        }
+        
+        var error = {(var error: NSError) -> () in
+            callbackCalled = true
+            XCTFail("Fetching post failed with error.")
+        }
+        
+        store.fetchPosts(success: success, error: error)
 
+        XCTAssertTrue(callbackCalled, "Callback was never called.")
+    }
+
+    
+    func testCreatePost() {
+        var store = SCPostingStore(network: SCLocalNetworkStore(waitTimeInSeconds: 0))
+        var posting = SCTestFactory.createPostingWithId("123")
+        
+        var callbackCalled = false
+        var success = {() -> () in
+            callbackCalled = true
+            XCTAssertEqual(posting, store[posting.id]!, "Did not create a new post")
+        }
+        
+        var error = {(var error: NSError) -> () in
+            callbackCalled = true
+            XCTFail("Creating a post failed.")
+        }
+        
+        store.createPost(posting, success: success, error: error)
+        
+        XCTAssertTrue(callbackCalled, "Callback was never called.")
+    }
 }
