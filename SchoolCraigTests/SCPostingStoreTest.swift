@@ -56,11 +56,15 @@ class SCPostingStoreTest: XCTestCase {
     
     
     func testFetchPosts() {
-        var store = SCPostingStore(network: SCLocalNetworkStore(waitTimeInSeconds: 0))
+        var network = SCLocalNetworkStore(waitTimeInSeconds: 0)
+        var store = SCPostingStore(network: network)
         
         var callbackCalled = false
         var success = {() -> () in
             callbackCalled = true
+            XCTAssertTrue(network.didCall(endpoint: "/post", method: SCNetworkMethod.POST),
+                          "Network Store never attempted to get posts.")
+            
             XCTAssertNotNil(store["123"], "Post with id 123 should exist.")
             XCTAssertNotNil(store["124"], "Post with id 124 should exist.")
             XCTAssertNotNil(store["125"], "Post with id 125 should exist.")
@@ -79,12 +83,15 @@ class SCPostingStoreTest: XCTestCase {
 
     
     func testCreatePost() {
-        var store = SCPostingStore(network: SCLocalNetworkStore(waitTimeInSeconds: 0))
+        var network = SCLocalNetworkStore(waitTimeInSeconds: 0)
+        var store = SCPostingStore(network: network)
         var posting = SCTestFactory.createPostingWithId("123")
-        
         var callbackCalled = false
+
         var success = {() -> () in
             callbackCalled = true
+            XCTAssertTrue(network.didCall(endpoint: "/post", method: SCNetworkMethod.POST),
+                          "Network Store never attempted to create a post.")
             XCTAssertEqual(posting, store[posting.id]!, "Did not create a new post")
         }
         
