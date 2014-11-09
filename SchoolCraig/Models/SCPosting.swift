@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SCPosting {
+class SCPosting: Equatable {
     
     var id: String
     
@@ -40,6 +40,11 @@ class SCPosting {
             self.price = price
             self.creationDate = creationDate
         }
+    
+    
+}
 
 
+func == (posting1: SCPosting, posting2: SCPosting) -> Bool {
+    return posting1.id == posting2.id
 }
