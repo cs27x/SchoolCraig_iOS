@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SCUser {
+class SCUser: Equatable {
     
     var email: String
     
@@ -17,4 +17,9 @@ class SCUser {
     }
     
     
+}
+
+
+func == (user1: SCUser, user2: SCUser) -> Bool {
+    return user1.email == user2.email
 }

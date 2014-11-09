@@ -38,6 +38,10 @@
 		FC5C3EF419F9487600AE2AAA /* SCDesignStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EF319F9487600AE2AAA /* SCDesignStore.swift */; };
 		FC5C3EFA19F9581200AE2AAA /* SCNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EF919F9581200AE2AAA /* SCNetworkRequest.swift */; };
 		FC5C3EFC19F9587800AE2AAA /* SCNetworkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EFB19F9587800AE2AAA /* SCNetworkStore.swift */; };
+		FC5FED4A1A101034004BD366 /* SCUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5FED491A101034004BD366 /* SCUserStore.swift */; };
+		FC5FED4B1A101060004BD366 /* SCUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5FED491A101034004BD366 /* SCUserStore.swift */; };
+		FC5FED4C1A10194A004BD366 /* SCNetworkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EFB19F9587800AE2AAA /* SCNetworkStore.swift */; };
+		FC5FED4E1A101AC3004BD366 /* SCUserStoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5FED4D1A101AC3004BD366 /* SCUserStoreTest.swift */; };
 		FCB4A7AF19FFF79D00C2EAA3 /* SCLocalNetworkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB4A7AE19FFF79D00C2EAA3 /* SCLocalNetworkStore.swift */; };
 		FCB4A7B119FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB4A7B019FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift */; };
 		FCC6913019FDCE450016771D /* SCNetworkMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC6912F19FDCE450016771D /* SCNetworkMethod.swift */; };
@@ -78,6 +82,8 @@
 		FC5C3EF319F9487600AE2AAA /* SCDesignStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCDesignStore.swift; path = Stores/SCDesignStore.swift; sourceTree = "<group>"; };
 		FC5C3EF919F9581200AE2AAA /* SCNetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCNetworkRequest.swift; path = API/SCNetworkRequest.swift; sourceTree = "<group>"; };
 		FC5C3EFB19F9587800AE2AAA /* SCNetworkStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCNetworkStore.swift; path = Stores/SCNetworkStore.swift; sourceTree = "<group>"; };
+		FC5FED491A101034004BD366 /* SCUserStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCUserStore.swift; path = Stores/SCUserStore.swift; sourceTree = "<group>"; };
+		FC5FED4D1A101AC3004BD366 /* SCUserStoreTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCUserStoreTest.swift; sourceTree = "<group>"; };
 		FCB4A7AE19FFF79D00C2EAA3 /* SCLocalNetworkStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCLocalNetworkStore.swift; path = Stores/SCLocalNetworkStore.swift; sourceTree = "<group>"; };
 		FCB4A7B019FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCNetworkStoreProtocol.swift; path = API/SCNetworkStoreProtocol.swift; sourceTree = "<group>"; };
 		FCC6912F19FDCE450016771D /* SCNetworkMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCNetworkMethod.swift; path = API/SCNetworkMethod.swift; sourceTree = "<group>"; };
@@ -162,6 +168,7 @@
 				FC5C3EF319F9487600AE2AAA /* SCDesignStore.swift */,
 				FC5C3EFB19F9587800AE2AAA /* SCNetworkStore.swift */,
 				FCB4A7AE19FFF79D00C2EAA3 /* SCLocalNetworkStore.swift */,
+				FC5FED491A101034004BD366 /* SCUserStore.swift */,
 			);
 			name = Stores;
 			sourceTree = "<group>";
@@ -216,6 +223,7 @@
 				FCF8205619F8B9850015E3A6 /* Supporting Files */,
 				FC0EBD6E1A06B68B007C2E1E /* SCRequestTests.swift */,
 				824D1CD21A086A260000C235 /* SCAPITests.swift */,
+				FC5FED4D1A101AC3004BD366 /* SCUserStoreTest.swift */,
 			);
 			path = SchoolCraigTests;
 			sourceTree = "<group>";
@@ -341,6 +349,7 @@
 				FCF1B4B219FB0CB900C38D83 /* SCAllPostingsRequest.swift in Sources */,
 				FC5C3EEF19F947C500AE2AAA /* SCPosting.swift in Sources */,
 				FC0EBD7C1A06BEE1007C2E1E /* SCCreatePostingRequest.swift in Sources */,
+				FC5FED4A1A101034004BD366 /* SCUserStore.swift in Sources */,
 				8E41632F1A06EAD300BA57F8 /* SCAPI.swift in Sources */,
 				FCB4A7B119FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift in Sources */,
 				FC29E3291A06988D00F6C144 /* SCLoginRequest.swift in Sources */,
@@ -359,6 +368,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC5FED4B1A101060004BD366 /* SCUserStore.swift in Sources */,
+				FC5FED4C1A10194A004BD366 /* SCNetworkStore.swift in Sources */,
+				FC5FED4E1A101AC3004BD366 /* SCUserStoreTest.swift in Sources */,
 				FC0EBD791A06B6F7007C2E1E /* SCLocalNetworkStore.swift in Sources */,
 				FC0EBD761A06B6E0007C2E1E /* SCPosting.swift in Sources */,
 				8E4163301A06EBEA00BA57F8 /* SCCreatePostingRequest.swift in Sources */,
