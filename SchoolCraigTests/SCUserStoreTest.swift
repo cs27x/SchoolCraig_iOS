@@ -63,7 +63,7 @@ class SCUserStoreTest: XCTestCase {
         
         var success = {() -> () in
             didExecuteCallback = true
-            XCTAssertTrue(network.didCall(endpoint: "user/login", method: SCNetworkMethod.GET),
+            XCTAssertTrue(network.didCall(endpoint: "/user/login", method: SCNetworkMethod.GET),
                           "Never logged in the user through network.")
             XCTAssertNotNil(store.current, "The current user was never set for the store.")
         
