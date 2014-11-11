@@ -25,6 +25,12 @@ class SCCreatePostingRequest: SCNetworkRequest {
     }
     
     
+    func body() -> NSDictionary? {
+        // TODO (brendan): Add a body.
+        return nil
+    }
+    
+    
     func serialize(object: SCPosting) -> AnyObject {
         // TODO (brendan): Implement me!
         return SCAPI.serializePosting(object)

@@ -15,16 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        var request = SCAllPostingsRequest()
 
-        request.onSuccess = {(var arr) -> () in
-            print(arr!)
+        var success = {(var array: Array<SCUser>?) -> () in
+            print(array!)
         }
         
+        var error = {(var error: NSError) -> () in
+            print(error)
+        }
         
-        var networkStore = SCLocalNetworkStore(waitTimeInSeconds:0)
-        networkStore.handleRequest(request)
+        var request = SCLoginRequest(email: "brendan.d.mcnamara@vanderbilt.edu",
+                                     password: "password")
+        
+        request.onSuccess = success
+        request.onError = error
+        SCNetworkStore.sharedInstance.handleRequest(request)
 
         return true
     }

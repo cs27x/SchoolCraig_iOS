@@ -10,7 +10,7 @@ import UIKit
 
 class SCNetworkStore: SCNetworkStoreProtocol {
    
-    var rootPath = "blah.com"
+    var rootPath = "http://school-craig.herokuapp.com"
     
     class var sharedInstance: SCNetworkStore {
         get {
@@ -24,45 +24,82 @@ class SCNetworkStore: SCNetworkStoreProtocol {
     }
     
     
+    func isAcceptableResponseCode(code: Int) -> Bool {
+        return code >= 200 && code <= 399
+    }
+    
+    
     func handleRequest<T: SCNetworkRequest>(request: T) {
         // Submit the request here.
 
-        // TODO (brendan) why is NSURL evaluating to an optional?
+        // TODO (brendan): why is NSURL evaluating to an optional?
         var url = NSURL(string: self.rootPath + request.path)
         var urlRequest = NSMutableURLRequest(URL: url!)
 
         urlRequest.HTTPMethod = request.method.rawValue
         
-
+        // Convert data in url request and add from dictionary to data
+        // Add HttpBody property
+        if let body = request.body() {
+            var httpData =
+            NSJSONSerialization.dataWithJSONObject(body,
+                                                   options: NSJSONWritingOptions.allZeros,
+                                                   error: nil)
+            
+            urlRequest.HTTPBody = httpData
+        }
+        
         var requestHandler = {(data: NSData!, response: NSURLResponse!, error:NSError!) -> () in
+            var httpResponse = response as NSHTTPURLResponse
+            if !self.isAcceptableResponseCode(httpResponse.statusCode) {
+                // Better error here!
+                request.onError!(NSError())
+                return
+            }
+            
             if let _error = error {
                 request.onError!(_error)
             }
             else {
-                // TODO (brendan): Add error handling!
+                var jsonError: NSError?
                 var json: AnyObject? =
-                    NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments, error: nil)
+                    NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments, error: &jsonError)
                 
-                // Check if this is an array of objects.
-                if let arr = json! as? NSArray {
-                    var objects = request.parseArray(arr)
-                    
-                    self.onMainQueue {
-                        request.onSuccess!(objects)
+                // Check if there was an error parsing the json.
+                if let _jsonError = jsonError {
+                    request.onError!(_jsonError)
+                }
+                // Check if the json optional is empty
+                else if let _json: AnyObject = json {
+                    // Check if this is an array of objects.
+                    if let arr = _json as? NSArray {
+                        var objects = request.parseArray(arr)
+                        
+                        self.onMainQueue {
+                            request.onSuccess!(objects)
+                        }
+                    }
+                    else {
+                        var object = request.parse(json!)
+                        self.onMainQueue {
+                            request.onSuccess!([object])
+                        }
                     }
                 }
+                // The json optional was empty, so handle this.
                 else {
-                    var object = request.parse(json!)
-                    self.onMainQueue {
-                        request.onSuccess!([object])
-                    }
+                    request.onError!(NSError())
                 }
 
             }
         }
         
-        NSURLSession.sharedSession().dataTaskWithRequest(urlRequest,
-                                                         completionHandler: requestHandler)
+        var error: NSError
+        var task =
+            NSURLSession.sharedSession().dataTaskWithRequest(urlRequest,
+                                                             completionHandler: requestHandler)
+        
+        task.resume()
     }
 
 

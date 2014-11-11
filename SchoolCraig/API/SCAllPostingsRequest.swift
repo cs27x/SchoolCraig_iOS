@@ -24,6 +24,11 @@ class SCAllPostingsRequest: SCNetworkRequest {
     }
     
     
+    func body() -> NSDictionary? {
+        return nil
+    }
+    
+    
     func parse(json: AnyObject) -> SCPosting {
         return SCAPI.parsePosting(json)
     }
@@ -37,7 +42,6 @@ class SCAllPostingsRequest: SCNetworkRequest {
     
     
     func serialize(object: SCPosting) -> AnyObject {
-//        return []
         return SCAPI.parsePosting(object)
     }
     

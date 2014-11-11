@@ -20,6 +20,10 @@ protocol SCNetworkRequest {
     
     var onError: ((NSError) -> ())? { get set }
     
+    // The body of the HTTP response. Not all
+    // requests need a body.
+    func body() -> NSDictionary?
+    
     // JSON -> Object
     func parse(json: AnyObject) -> T
     func parseArray(json: NSArray) -> Array<T>
