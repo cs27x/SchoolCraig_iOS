@@ -14,7 +14,7 @@ class SCRequestTests: XCTestCase {
     func testLoginRequest() {
         var callbackIsCalled = false;
         var request = SCLoginRequest(email: "brendan.d.mcnamara@vanderbilt.edu",
-            password: "password")
+                                     password: "password")
         
         request.onSuccess = {(var userArray) -> () in
             callbackIsCalled = true;
@@ -54,7 +54,7 @@ class SCRequestTests: XCTestCase {
         
         request.onError = {(var error) -> () in
             callbackIsCalled = true;
-            XCTFail("login request onError was executed: \(error)")
+            XCTFail("login request onError was executed")
         }
         
         var networkStore = SCLocalNetworkStore(waitTimeInSeconds: 0)
@@ -62,6 +62,7 @@ class SCRequestTests: XCTestCase {
         
         XCTAssertTrue(callbackIsCalled, "Expect onSuccess to be called for posting request")
     }
+    
     
     func testCreatePostingRequest() {
         var callbackIsCalled = false;
@@ -81,7 +82,7 @@ class SCRequestTests: XCTestCase {
         
         request.onError = {(var error) -> () in
             callbackIsCalled = true;
-            XCTFail("create new posting request onError was executed: \(error)")
+            XCTFail("create new posting request onError was executed")
         }
         
         var networkStore = SCLocalNetworkStore(waitTimeInSeconds: 0)
@@ -89,4 +90,6 @@ class SCRequestTests: XCTestCase {
         
         XCTAssertTrue(callbackIsCalled, "Expect onSuccess to be called for creating new posting request")
     }
+
+
 }

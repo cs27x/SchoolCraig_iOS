@@ -42,52 +42,43 @@ class SCLocalNetworkStore: SCNetworkStoreProtocol {
         
         var path = NSBundle.mainBundle().pathForResource(fileName, ofType: "json")
         
-        switch request.method {
-        case .GET:
-            if let _path = path {
-                var dataAtPath = NSData(contentsOfFile: _path)
-                // TODO (brendan): Don't force unwrap the dataAtPath value.
-                var serializedData =
-                NSJSONSerialization.JSONObjectWithData(dataAtPath!, options: nil, error: nil) as NSDictionary?
+        if let _path = path {
+            var dataAtPath = NSData(contentsOfFile: _path)
+            // TODO (brendan): Don't force unwrap the dataAtPath value.
+            var serializedData =
+            NSJSONSerialization.JSONObjectWithData(dataAtPath!,
+                                                   options: nil,
+                                                   error: nil) as NSDictionary?
+            
+            if let _data = serializedData {
                 
-                if let _data = serializedData {
-                    
-                    if let jsonArray = _data["data"] as? NSArray {
-                        // The data field is an array.
-                        request.onSuccess!(request.parseArray(jsonArray))
-                    }
-                    else if let jsonObj = _data["data"] as? NSDictionary {
-                        // The data field is a dictionary.
-                        request.onSuccess!([request.parse(jsonObj)])
-                    }
-                    else {
-                        // Unrecognized object type at root.
-                        // TODO (brendan): Better error message.
-                        request.onError!(NSError())
-                    }
+                if let jsonArray = _data["data"] as? NSArray {
+                    // The data field is an array.
+                    request.onSuccess!(request.parseArray(jsonArray))
+                }
+                else if let jsonObj = _data["data"] as? NSDictionary {
+                    // The data field is a dictionary.
+                    request.onSuccess!([request.parse(jsonObj)])
                 }
                 else {
-                    // The file is in invalid format to be read as a json
-                    // file.
+                    // Unrecognized object type at root.
                     // TODO (brendan): Better error message.
                     request.onError!(NSError())
                 }
             }
             else {
-                // TODO (brendan): Populate error information.
-                // Invalid fileName variable, the request is not formatted correctly
-                // or a file has not been set up to handle the request.
+                // The file is in invalid format to be read as a json
+                // file.
+                // TODO (brendan): Better error message.
                 request.onError!(NSError())
             }
-        case .POST:
-            fallthrough
-        case .PUT:
-            fallthrough
-        case .DELETE:
-            // Successful completion of the request.
-            // Not fetching any data.
+        }
+        else {
+            // No filename exists for this file, assume that this is because the
+            // request does not result in any information.
             request.onSuccess!(nil)
         }
+
     }
 
 
