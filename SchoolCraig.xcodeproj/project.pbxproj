@@ -157,9 +157,9 @@
 				FC0EBD7B1A06BEE1007C2E1E /* SCCreatePostingRequest.swift */,
 				FCF1B4B119FB0CB900C38D83 /* SCAllPostingsRequest.swift */,
 				FC29E3281A06988D00F6C144 /* SCLoginRequest.swift */,
+				FC2D3A281A1816C500C8BD7B /* SCCreateUserRequest.swift */,
 				FC470EBF1A01EC8700BBA103 /* post.all.json */,
 				FC29E3261A0693EE00F6C144 /* user.login.json */,
-				FC2D3A281A1816C500C8BD7B /* SCCreateUserRequest.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";

@@ -9,6 +9,9 @@
 import UIKit
 
 class SCCreateUserRequest: SCNetworkRequest {
+    
+    var user: SCUser
+    var password: String
    
     var method = SCNetworkMethod.POST
     
@@ -17,6 +20,12 @@ class SCCreateUserRequest: SCNetworkRequest {
     var onSuccess: ((Array<SCUser>?) -> ())?
     
     var onError: ((NSError) -> ())?
+    
+    init(user: SCUser, password: String) {
+        self.user = user
+        
+        self.password = password
+    }
     
     func parse(json: AnyObject) -> SCUser {
         return SCAPI.parseUser(json)
