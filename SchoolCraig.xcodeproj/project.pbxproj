@@ -33,6 +33,7 @@
 		FC29C28819FD73C300BF99BB /* SCCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29C28719FD73C300BF99BB /* SCCategory.swift */; };
 		FC29E3271A0693EE00F6C144 /* user.login.json in Resources */ = {isa = PBXBuildFile; fileRef = FC29E3261A0693EE00F6C144 /* user.login.json */; };
 		FC29E3291A06988D00F6C144 /* SCLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29E3281A06988D00F6C144 /* SCLoginRequest.swift */; };
+		FC2D3A291A1816C500C8BD7B /* SCCreateUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D3A281A1816C500C8BD7B /* SCCreateUserRequest.swift */; };
 		FC470EC11A01EC8700BBA103 /* post.all.json in Resources */ = {isa = PBXBuildFile; fileRef = FC470EBF1A01EC8700BBA103 /* post.all.json */; };
 		FC5C3EEF19F947C500AE2AAA /* SCPosting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EEE19F947C500AE2AAA /* SCPosting.swift */; };
 		FC5C3EF419F9487600AE2AAA /* SCDesignStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EF319F9487600AE2AAA /* SCDesignStore.swift */; };
@@ -77,6 +78,7 @@
 		FC29C28719FD73C300BF99BB /* SCCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCCategory.swift; path = Models/SCCategory.swift; sourceTree = "<group>"; };
 		FC29E3261A0693EE00F6C144 /* user.login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = user.login.json; path = API/user.login.json; sourceTree = "<group>"; };
 		FC29E3281A06988D00F6C144 /* SCLoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCLoginRequest.swift; path = API/SCLoginRequest.swift; sourceTree = "<group>"; };
+		FC2D3A281A1816C500C8BD7B /* SCCreateUserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCCreateUserRequest.swift; path = API/SCCreateUserRequest.swift; sourceTree = "<group>"; };
 		FC470EBF1A01EC8700BBA103 /* post.all.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = post.all.json; path = API/post.all.json; sourceTree = "<group>"; };
 		FC5C3EEE19F947C500AE2AAA /* SCPosting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCPosting.swift; path = Models/SCPosting.swift; sourceTree = "<group>"; };
 		FC5C3EF319F9487600AE2AAA /* SCDesignStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCDesignStore.swift; path = Stores/SCDesignStore.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				FC29E3281A06988D00F6C144 /* SCLoginRequest.swift */,
 				FC470EBF1A01EC8700BBA103 /* post.all.json */,
 				FC29E3261A0693EE00F6C144 /* user.login.json */,
+				FC2D3A281A1816C500C8BD7B /* SCCreateUserRequest.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				FC5FED4A1A101034004BD366 /* SCUserStore.swift in Sources */,
 				8E41632F1A06EAD300BA57F8 /* SCAPI.swift in Sources */,
 				FCB4A7B119FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift in Sources */,
+				FC2D3A291A1816C500C8BD7B /* SCCreateUserRequest.swift in Sources */,
 				FC29E3291A06988D00F6C144 /* SCLoginRequest.swift in Sources */,
 				025C26A01A041A2000F8EFF9 /* SCPostingTableViewController.swift in Sources */,
 				FCF8204519F8B9850015E3A6 /* ViewController.swift in Sources */,
