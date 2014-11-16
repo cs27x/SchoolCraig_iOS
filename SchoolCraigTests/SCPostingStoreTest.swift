@@ -62,7 +62,7 @@ class SCPostingStoreTest: XCTestCase {
         var callbackCalled = false
         var success = {() -> () in
             callbackCalled = true
-            XCTAssertTrue(network.didCall(endpoint: "/post", method: SCNetworkMethod.POST),
+            XCTAssertTrue(network.didCall(endpoint: "/post/all", method: SCNetworkMethod.GET),
                           "Network Store never attempted to get posts.")
             
             XCTAssertNotNil(store["123"], "Post with id 123 should exist.")

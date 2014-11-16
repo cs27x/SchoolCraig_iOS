@@ -61,18 +61,37 @@ class SCPostingStore: SequenceType {
     
     
     func fetchPosts(#success: () -> (), error: (NSError) -> ()) {
-        // TODO: Implement me!
-        // NOTE: You should be using the network property of this class.
-        // Use AllPostings request to get all the posts
+        var request = SCAllPostingsRequest()
+        
+        request.onSuccess = {(var array: Array<SCPosting>?) -> () in
+            for item in array! {
+                self.add(item)
+            }
+            success()
+        }
 
-        // Merge the posts that were retrieved by SCPostings into
-        // the existing dictionary of posts.
-        // If an error occurs, call the error callback.
+        request.onError = {(var errorMessage: NSError) -> () in
+            error(errorMessage)
+        }
+        
+        network.handleRequest(request)
     }
     
 
     func createPost(posting: SCPosting, success: () -> (), error: (NSError) -> ()) {
-        // TODO: Implement me!
+        var request = SCCreatePostingRequest(posting: posting)
+        
+        request.onSuccess = {(var array: Array<SCPosting>?) -> () in
+            self.add(posting)
+            success()
+        }
+
+        
+        request.onError = {(var errorMessage: NSError) -> () in
+            error(errorMessage)
+        }
+        
+        network.handleRequest(request)
     }
     
     
