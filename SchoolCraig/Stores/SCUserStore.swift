@@ -101,7 +101,7 @@ class SCUserStore: SequenceType {
         // TODO: Implement me!
         
         // Use the create user request.
-        var request = SCCreatePostingRequest(user: user, password: password)
+        var request = SCCreateUserRequest(user: user, password: password)
         
         request.onSuccess = {(var userArray) -> () in
             if let _userArray = userArray {

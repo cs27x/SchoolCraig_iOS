@@ -11,6 +11,7 @@ import UIKit
 class SCCreateUserRequest: SCNetworkRequest {
     
     var user: SCUser
+    
     var password: String
    
     var method = SCNetworkMethod.POST
@@ -23,7 +24,6 @@ class SCCreateUserRequest: SCNetworkRequest {
     
     init(user: SCUser, password: String) {
         self.user = user
-        
         self.password = password
     }
     
@@ -32,7 +32,7 @@ class SCCreateUserRequest: SCNetworkRequest {
     }
     
     func parseArray(json: NSArray) -> Array<SCUser> {
-        return (json as Array).map {(var obj) in
+        return (json as Array).map {(var obj) -> (SCUser) in
             return self.parse(obj)
         }
     }
@@ -42,7 +42,7 @@ class SCCreateUserRequest: SCNetworkRequest {
     }
     
     func serializeArray(objects: Array<SCUser>) -> NSArray {
-        return (objects as Array).map {(var user) in
+        return (objects as Array).map {(var user) -> (AnyObject) in
             return self.serialize(user)
         }
     }

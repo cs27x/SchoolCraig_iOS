@@ -13,6 +13,7 @@
 		02A82C1B19FFFA09005BC021 /* SCPostingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A82C1919FFFA09005BC021 /* SCPostingTableViewCell.xib */; };
 		02C224A91A06D4FC00D2C58C /* SCLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C224A81A06D4FC00D2C58C /* SCLoginViewController.swift */; };
 		797E444B1A06EEDC0065702F /* SCAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E41632E1A06EAD300BA57F8 /* SCAPI.swift */; };
+		79B41F5A1A181EBF00B4ACC0 /* SCCreateUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D3A281A1816C500C8BD7B /* SCCreateUserRequest.swift */; };
 		824D1CD31A086A260000C235 /* SCAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824D1CD21A086A260000C235 /* SCAPITests.swift */; };
 		8E41632C1A06E83900BA57F8 /* SCLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29E3281A06988D00F6C144 /* SCLoginRequest.swift */; };
 		8E41632F1A06EAD300BA57F8 /* SCAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E41632E1A06EAD300BA57F8 /* SCAPI.swift */; };
@@ -384,6 +385,7 @@
 				824D1CD31A086A260000C235 /* SCAPITests.swift in Sources */,
 				FC0EBD771A06B6E2007C2E1E /* SCUser.swift in Sources */,
 				FC0EBD7A1A06B700007C2E1E /* SCNetworkStoreProtocol.swift in Sources */,
+				79B41F5A1A181EBF00B4ACC0 /* SCCreateUserRequest.swift in Sources */,
 				8E41632C1A06E83900BA57F8 /* SCLoginRequest.swift in Sources */,
 				FC0EBD6F1A06B68B007C2E1E /* SCRequestTests.swift in Sources */,
 				797E444B1A06EEDC0065702F /* SCAPI.swift in Sources */,
