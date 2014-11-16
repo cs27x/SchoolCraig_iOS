@@ -14,6 +14,9 @@ class SCLocalNetworkStore: SCNetworkStoreProtocol {
     
     var resultHash: Dictionary<String, AnyObject>?
     
+    var callHash = Dictionary<String, Array<SCNetworkMethod>>()
+    
+    
     init(waitTimeInSeconds: UInt64) {
         self.waitTimeInSeconds = waitTimeInSeconds
     }
@@ -41,6 +44,16 @@ class SCLocalNetworkStore: SCNetworkStoreProtocol {
                                                           range: nil)
         
         var path = NSBundle.mainBundle().pathForResource(fileName, ofType: "json")
+        
+        // Record that this method was called.
+        if let methods = callHash[request.path] {
+            if !contains(methods, request.method) {
+                callHash[request.path] = methods + [request.method]
+            }
+        }
+        else {
+            callHash[request.path] = [request.method]
+        }
         
         switch request.method {
         case .GET:
@@ -90,5 +103,15 @@ class SCLocalNetworkStore: SCNetworkStoreProtocol {
         }
     }
 
+    // TEST METHODS
+    
+    func didCall(#endpoint: String, method: SCNetworkMethod) -> Bool {
+        if let methods = callHash[endpoint] {
+            return contains(methods, method)
+        }
+        else {
+            return false
+        }
+    }
 
 }
