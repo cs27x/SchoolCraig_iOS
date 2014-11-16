@@ -104,26 +104,17 @@ class SCUserStore: SequenceType {
         var request = SCCreateUserRequest(user: user, password: password)
         
         request.onSuccess = {(var userArray) -> () in
-            if let _userArray = userArray {
-                self.current = _userArray[0]
+            // Append the current user to the users Array
+            self.users.append(user)
                 
-                // Append the current user to the users Array
-                self.users.append(self.current!)
-                
-                // call the success callback
-                success()
-                
-            }
-            else {
-                // call the failure callback
-                error(NSError())
-            }
+            // call the success callback
+            success()
         }
         
         request.onError = {(var error) -> () in
             // call the failure callback
             // TODO: Implement me later!
-            // error(NSError())
+            //error(NSError())
         }
         
         // handle the request using the network store.

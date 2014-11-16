@@ -97,7 +97,7 @@ class SCUserStoreTest: XCTestCase {
             didExecuteCallback = true
             XCTFail("Creating user produced error.")
         }
-        
+
         store.createUser(user: SCUser(email: "user@test.com"), password: "password",
                          success: success, error: error)
         
