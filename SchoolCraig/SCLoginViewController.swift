@@ -30,17 +30,27 @@ class SCLoginViewController: UIViewController {
 			sender.userInteractionEnabled = false;
 			sender.setTitle("Logging in....", forState: .Normal)
 			
-			var request = SCLoginRequest(email: usernameField.text, password: passwordField.text)
+			var network = SCLocalNetworkStore(waitTimeInSeconds: 0)
+			var store = SCUserStore(network: network)
 			
-			request.onSuccess = {(var userArray) -> () in
-				self.performSegueWithIdentifier("LoggedIn", sender: self)
-				sender.userInteractionEnabled = true;
-				sender.setTitle("LOGIN", forState: .Normal)
-				self.usernameField.text = ""
-				self.passwordField.text = ""
+			var success = {() -> () in
+				
+				if((store.current) != nil) {
+					self.performSegueWithIdentifier("LoggedIn", sender: self)
+					sender.userInteractionEnabled = true
+					sender.setTitle("LOGIN", forState: .Normal)
+					self.usernameField.text = ""
+					self.passwordField.text = ""
+				} else {
+					var alertView = UIAlertView()
+					alertView.addButtonWithTitle("OK")
+					alertView.title = "Login Failed"
+					alertView.message = "No account found. Please register."
+					alertView.show()
+				}
+				
 			}
-			
-			request.onError = {(var error) -> () in
+			var error = {(var error: NSError) -> () in
 				var alertView = UIAlertView()
 				alertView.addButtonWithTitle("OK")
 				alertView.title = "Login Failed"
@@ -48,9 +58,8 @@ class SCLoginViewController: UIViewController {
 				alertView.show()
 			}
 			
-			//TODO: Nonzero wait time
-			var networkStore = SCLocalNetworkStore(waitTimeInSeconds: 2)
-			networkStore.handleRequest(request)
+			store.login(email: usernameField.text, password: passwordField.text,
+				success: success, error: error)
 		}
 	}
 	
