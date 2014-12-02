@@ -45,7 +45,7 @@ class SCRequestTests: XCTestCase {
         request.onSuccess = {(var postingArray) -> () in
             callbackIsCalled = true;
             if let _postingArray = postingArray {
-                XCTAssertEqual(4, countElements(_postingArray), "Array should contain 4 user")
+                XCTAssertEqual(3, countElements(_postingArray), "Array should contain 4 user")
             }
             else {
                 XCTFail("Array optional from login request should not be nil optional")
@@ -69,7 +69,7 @@ class SCRequestTests: XCTestCase {
             title: "Fridgerator",
             details: "Graduating next year and would like to sell my fridge.",
             author: SCUser(email: "brendan.d.mcnamara@vanderbilt.edu"),
-            category: SCCategory.Dorm,
+            category: SCCategory.Kitchen,
             price: 20.2,
             creationDate: NSDate()
             )

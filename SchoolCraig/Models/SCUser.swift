@@ -10,10 +10,22 @@ import UIKit
 
 class SCUser: Equatable {
     
+    var id: String?
+
     var email: String
+    
+    init(id: String, email: String) {
+        self.id = id
+        self.email = email
+    }
     
     init(email: String) {
         self.email = email
+    }
+    
+    // Check if this is a new user.
+    func isNew() -> Bool {
+        return self.id == nil
     }
     
 

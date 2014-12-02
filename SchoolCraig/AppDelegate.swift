@@ -16,15 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        var inst = SCPostingStore.sharedInstance
-        
-        inst.fetchPosts(success: { () -> () in
-            
-            print(inst.allPosts())
-        }) { (error) -> () in
-            
-        }
-
         
         return true
     }

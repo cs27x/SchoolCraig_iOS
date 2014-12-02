@@ -65,10 +65,14 @@ class SCPostingStoreTest: XCTestCase {
             XCTAssertTrue(network.didCall(endpoint: "/post/all", method: SCNetworkMethod.GET),
                           "Network Store never attempted to get posts.")
             
-            XCTAssertNotNil(store["123"], "Post with id 123 should exist.")
-            XCTAssertNotNil(store["124"], "Post with id 124 should exist.")
-            XCTAssertNotNil(store["125"], "Post with id 125 should exist.")
-            XCTAssertNotNil(store["126"], "Post with id 126 should exist.")
+            XCTAssertNotNil(store["467e65b0-3288-4224-85db-b33a3117d218"],
+                                  "Post with id 467e65b0-3288-4224-85db-b33a3117d218 should exist.")
+
+            XCTAssertNotNil(store["567e65b0-3288-4224-85db-b33a3117d218"],
+                                  "Post with id 567e65b0-3288-4224-85db-b33a3117d218 should exist.")
+
+            XCTAssertNotNil(store["667e65b0-3288-4224-85db-b33a3117d218"],
+                                  "Post with id 667e65b0-3288-4224-85db-b33a3117d218 should exist.")
         }
         
         var error = {(var error: NSError) -> () in

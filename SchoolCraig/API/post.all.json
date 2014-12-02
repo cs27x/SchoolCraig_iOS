@@ -1,40 +1,55 @@
 {
     "data": [
              {
-                 "id": "123",
-                 "title": "Fridgerator",
-                 "description": "Graduating next year and would like to sell my fridge.",
-                 "date": 1414644539,
-                 "price": 45,
-                 "author": "brendan.d.mcnamara@vanderbilt.edu",
-                 "category": 0
+               "id": "467e65b0-3288-4224-85db-b33a3117d218",
+               "date": "2014-12-02T03:29:55.838Z",
+               "description": "Used Nikon camera",
+               "cost": 100,
+               "title": "Camera",
+               "user": {
+                   "id": "d0c1489c-8e88-4079-a4fe-14f1a3d4c885",
+                   "fname": "Violetta",
+                   "lname": "Vylegzhanina",
+                   "email": "violetta.vylegzhanina@vanderbilt.edu"
+                },
+               "category": {
+                 "id": "c2d268aa-71ad-44c1-bd9b-14d9c56f2431",
+                 "name": "Electronics"
+               }
              },
              {
-                 "id": "124",
-                 "title": "Futon",
-                 "description": "Great condition, barely used. You should definitely buy this thing because it is so so awesome",
-                 "date": 1414644539,
-                 "price": 60,
-                 "author": "brendan.d.mcnamara@vanderbilt.edu",
-                 "category": 1
+               "id": "567e65b0-3288-4224-85db-b33a3117d218",
+               "date": "2014-12-02T03:29:55.838Z",
+               "description": "Used Nikon camera",
+               "cost": 100,
+               "title": "Camera",
+               "user": {
+                 "id": "d0c1489c-8e88-4079-a4fe-14f1a3d4c885",
+                 "fname": "Violetta",
+                 "lname": "Vylegzhanina",
+                 "email": "violetta.vylegzhanina@vanderbilt.edu"
+               },
+               "category": {
+                 "id": "c2d268aa-71ad-44c1-bd9b-14d9c56f2431",
+                 "name": "Electronics"
+               }
              },
              {
-                 "id": "125",
-                 "title": "Futon",
-                 "description": "Great condition, barely used. You should definitely buy this thing because it is so so awesome",
-                 "date": 1414644539,
-                 "price": 60,
-                 "author": "brendan.d.mcnamara@vanderbilt.edu",
-                 "category": 1
-             },
-             {
-                 "id": "126",
-                 "title": "Futon",
-                 "description": "Great condition, barely used. You should definitely buy this thing because it is so so awesome",
-                 "date": 1414644539,
-                 "price": 60,
-                 "author": "brendan.d.mcnamara@vanderbilt.edu",
-                 "category": 1
+               "id": "667e65b0-3288-4224-85db-b33a3117d218",
+               "date": "2014-12-02T03:29:55.838Z",
+               "description": "Used Nikon camera",
+               "cost": 100,
+               "title": "Camera",
+               "user": {
+                 "id": "d0c1489c-8e88-4079-a4fe-14f1a3d4c885",
+                 "fname": "Violetta",
+                 "lname": "Vylegzhanina",
+                 "email": "violetta.vylegzhanina@vanderbilt.edu"
+               },
+               "category": {
+                 "id": "c2d268aa-71ad-44c1-bd9b-14d9c56f2431",
+                 "name": "Electronics"
+               }
              }
          ]
 }
