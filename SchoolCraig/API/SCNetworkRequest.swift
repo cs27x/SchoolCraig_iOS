@@ -19,6 +19,10 @@ protocol SCNetworkRequest {
     var onSuccess: ((Array<T>?) -> ())? { get set }
     
     var onError: ((NSError) -> ())? { get set }
+
+    // An optional body that can be added
+    // for any requests that want to send along data.
+    func body() -> NSDictionary?
     
     // JSON -> Object
     func parse(json: AnyObject) -> T

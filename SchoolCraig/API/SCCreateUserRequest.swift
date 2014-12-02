@@ -27,6 +27,12 @@ class SCCreateUserRequest: SCNetworkRequest {
         self.password = password
     }
     
+    
+    func body() -> NSDictionary? {
+        return nil
+    }
+    
+    
     func parse(json: AnyObject) -> SCUser {
         return SCAPI.parseUser(json)
     }

@@ -18,9 +18,13 @@ class SCAllPostingsRequest: SCNetworkRequest {
     
     var onError: ((NSError) -> ())?
     
-    
     init() {
     
+    }
+    
+
+    func body() -> NSDictionary? {
+        return nil
     }
     
     
