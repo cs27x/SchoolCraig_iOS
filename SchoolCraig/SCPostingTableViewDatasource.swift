@@ -44,20 +44,22 @@ public class SCPostingTableViewDataSource: NSObject, UITableViewDataSource {
 	}
 	
 	public func getAllPosts() -> NSArray {
-		var request = SCAllPostingsRequest()
-		var postsArray:[SCPosting] = []
 		
-		request.onSuccess = {(var array: Array<SCPosting>?) -> () in
-			postsArray = array!
-			//print(array)
+		var postsArray:[SCPosting] = []
+
+		var network = SCLocalNetworkStore(waitTimeInSeconds: 0)
+		var store = SCPostingStore(network: network)
+		
+		var callbackCalled = false
+		var success = {() -> () in
+			postsArray = store.allPosts()
 		}
 		
-		request.onError = {(var error: NSError) -> () in
+		var error = {(var error: NSError) -> () in
 			print(error)
 		}
 		
-		var networkStore = SCLocalNetworkStore(waitTimeInSeconds: 0)
-		networkStore.handleRequest(request)
+		store.fetchPosts(success: success, error: error)
 		
 		return postsArray
 	}
