@@ -43,7 +43,7 @@ class SCUserStore: SequenceType {
                 static var token : dispatch_once_t = 0
             }
             dispatch_once(&Static.token) {
-                Static.instance = SCUserStore(network: SCLocalNetworkStore(waitTimeInSeconds: 1))
+                Static.instance = SCUserStore(network: SCNetworkStore.sharedInstance)
             }
             return Static.instance!
         }

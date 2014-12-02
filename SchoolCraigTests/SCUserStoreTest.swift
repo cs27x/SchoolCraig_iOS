@@ -53,31 +53,6 @@ class SCUserStoreTest: XCTestCase {
         XCTAssertTrue(didIterateUser2, "Never iterated user 2.")
         
     }
-    
-
-    func testLogin() {
-        var network = SCLocalNetworkStore(waitTimeInSeconds: 0)
-        var store = SCUserStore(network: network)
-        
-        var didExecuteCallback = false
-        
-        var success = {() -> () in
-            didExecuteCallback = true
-            XCTAssertTrue(network.didCall(endpoint: "/user/login", method: SCNetworkMethod.GET),
-                          "Never logged in the user through network.")
-            XCTAssertNotNil(store.current, "The current user was never set for the store.")
-        
-        }
-        var error = {(var error: NSError) -> () in
-            didExecuteCallback = true
-            XCTFail("Login resulted in an error")
-        }
-        
-        store.login(email: "brendan.d.mcnamara@vanderbilt.edu", password: "password",
-                    success: success, error: error)
-        
-        XCTAssertTrue(didExecuteCallback, "Never executed any callback for login.")
-    }
 
     
     func testCreateUser() {

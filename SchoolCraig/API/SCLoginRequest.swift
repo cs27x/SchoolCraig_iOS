@@ -29,7 +29,8 @@ class SCLoginRequest: SCNetworkRequest {
     
     
     func body() -> NSDictionary? {
-        return nil
+        return ["email": self.email as NSString,
+                "password": self.password as NSString] as NSDictionary
     }
     
     
@@ -46,8 +47,6 @@ class SCLoginRequest: SCNetworkRequest {
     
     
     func serialize(object: SCUser) -> AnyObject {
-        // TODO: Implement me!
-//        return []
         return SCAPI.serializeUser(object);
     }
     
