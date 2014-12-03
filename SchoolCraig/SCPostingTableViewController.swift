@@ -43,8 +43,7 @@ class SCPostingTableViewController: UIViewController, UITableViewDelegate {
 		vc.post = post
 		self.navigationController?.pushViewController(vc, animated: true)
 		self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
-		//self.performSegueWithIdentifier("LoggedIn", sender: self)
-		
+	
 	}
 	
 	func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

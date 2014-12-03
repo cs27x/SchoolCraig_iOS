@@ -64,7 +64,8 @@ class SCLoginViewController: UIViewController {
 			store.login(email: usernameField.text, password: passwordField.text,
 				success: success, error: error)
 			
-			self.performSegueWithIdentifier("LoggedIn", sender: self)
+			//uncomment to skip to the posting screen
+			//self.performSegueWithIdentifier("LoggedIn", sender: self)
 		}
 	}
 	
