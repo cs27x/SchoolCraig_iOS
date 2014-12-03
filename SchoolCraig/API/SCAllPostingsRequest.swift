@@ -41,7 +41,6 @@ class SCAllPostingsRequest: SCNetworkRequest {
     
     
     func serialize(object: SCPosting) -> AnyObject {
-//        return []
         return SCAPI.parsePosting(object)
     }
     
