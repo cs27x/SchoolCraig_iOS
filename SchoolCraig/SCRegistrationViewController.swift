@@ -14,6 +14,8 @@ class SCRegistrationViewController: UIViewController {
 	@IBOutlet var emailField: UITextField!
 	@IBOutlet var confirmPasswordField: UITextField!
 	@IBOutlet var passwordField: UITextField!
+	@IBOutlet var firstNameField: UITextField!
+	@IBOutlet var lastNameField: UITextField!
 	
 	required init(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
@@ -48,7 +50,7 @@ class SCRegistrationViewController: UIViewController {
 				alertView.show()
 			}
 			
-			store.createUser(user: SCUser(email: emailField.text), password: passwordField.text,
+			store.createUser(firstName: firstNameField.text, lastName: lastNameField.text, email: emailField.text, password: passwordField.text,
 				success: success, error: error)
 		}
 	}
@@ -68,7 +70,7 @@ class SCRegistrationViewController: UIViewController {
 		
 		var success = true
 		
-		if(emailField.text == "" || passwordField.text == "") {
+		if(emailField.text == "" || passwordField.text == "" || firstNameField.text == "" || lastNameField.text == "") {
 			var alertView = UIAlertView()
 			alertView.addButtonWithTitle("OK")
 			alertView.title = "Invalid Credentials"

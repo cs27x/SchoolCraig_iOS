@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		02097D0A1A1A907200549255 /* SCNewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02097D091A1A907200549255 /* SCNewPostViewController.swift */; };
 		02097D0C1A1A908700549255 /* SCRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02097D0B1A1A908700549255 /* SCRegistrationViewController.swift */; };
+		0218EB971A2EA21E00777F90 /* SCPostingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218EB961A2EA21E00777F90 /* SCPostingDetailViewController.swift */; };
 		025C269E1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C269D1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift */; };
 		025C26A01A041A2000F8EFF9 /* SCPostingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C269F1A041A2000F8EFF9 /* SCPostingTableViewController.swift */; };
 		02A82C1A19FFFA09005BC021 /* SCPostingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A82C1819FFFA09005BC021 /* SCPostingTableViewCell.swift */; };
@@ -74,6 +75,7 @@
 /* Begin PBXFileReference section */
 		02097D091A1A907200549255 /* SCNewPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNewPostViewController.swift; sourceTree = "<group>"; };
 		02097D0B1A1A908700549255 /* SCRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCRegistrationViewController.swift; sourceTree = "<group>"; };
+		0218EB961A2EA21E00777F90 /* SCPostingDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPostingDetailViewController.swift; sourceTree = "<group>"; };
 		025C269D1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPostingTableViewDatasource.swift; sourceTree = "<group>"; };
 		025C269F1A041A2000F8EFF9 /* SCPostingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPostingTableViewController.swift; sourceTree = "<group>"; };
 		02A82C1819FFFA09005BC021 /* SCPostingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPostingTableViewCell.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				02097D091A1A907200549255 /* SCNewPostViewController.swift */,
 				02097D0B1A1A908700549255 /* SCRegistrationViewController.swift */,
 				025C269F1A041A2000F8EFF9 /* SCPostingTableViewController.swift */,
+				0218EB961A2EA21E00777F90 /* SCPostingDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				FC5C3EEF19F947C500AE2AAA /* SCPosting.swift in Sources */,
 				FC0EBD7C1A06BEE1007C2E1E /* SCCreatePostingRequest.swift in Sources */,
 				FC5FED4A1A101034004BD366 /* SCUserStore.swift in Sources */,
+				0218EB971A2EA21E00777F90 /* SCPostingDetailViewController.swift in Sources */,
 				02097D0A1A1A907200549255 /* SCNewPostViewController.swift in Sources */,
 				8E41632F1A06EAD300BA57F8 /* SCAPI.swift in Sources */,
 				FCB4A7B119FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift in Sources */,
