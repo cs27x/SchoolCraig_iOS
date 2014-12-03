@@ -154,7 +154,7 @@
                     <connections>
                         <outlet property="tableView" destination="7Mq-2j-uSU" id="0nR-L9-MD7"/>
                         <segue destination="2bz-0O-kKw" kind="show" identifier="cellSelected" id="MUW-oV-dnG"/>
-                        <segue destination="Hn4-to-zAJ" kind="presentation" id="PuK-PC-rIZ"/>
+                        <segue destination="Hn4-to-zAJ" kind="presentation" identifier="FilterPosting" id="PuK-PC-rIZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

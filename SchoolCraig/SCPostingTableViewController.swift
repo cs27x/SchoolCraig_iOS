@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SCPostingTableViewController: UIViewController, UITableViewDelegate {
+class SCPostingTableViewController: UIViewController, UITableViewDelegate, SCFilterPostingControllerDelegate {
 	@IBOutlet
 	var tableView: UITableView!
 	
@@ -34,18 +34,6 @@ class SCPostingTableViewController: UIViewController, UITableViewDelegate {
 	
 		
 	}
-	
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("FilterPostingView") as SCFilterPostingController
-        
-        self.presentViewController(UINavigationController(rootViewController: vc),
-                                   animated: true,
-                                   completion: nil)
-        
-    }
     
     
 	func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
@@ -62,4 +50,5 @@ class SCPostingTableViewController: UIViewController, UITableViewDelegate {
 	func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 		return 150
 	}
+    
 }

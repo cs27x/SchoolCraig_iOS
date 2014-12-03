@@ -22,6 +22,8 @@ class SCFilterPostingController: UITableViewController {
 
     let cellId = "filterCellId"
 
+    var delegate: SCFilterPostingControllerDelegate?
+    
     let categories = [SCCategory.Appliances, SCCategory.Electronics,
                       SCCategory.Furniture, SCCategory.General,
                       SCCategory.Other, SCCategory.Kitchen,
@@ -34,12 +36,26 @@ class SCFilterPostingController: UITableViewController {
         self.title = "Filter"
         tableView.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellId)
         
+        self.navigationItem.rightBarButtonItem =
+                UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel,
+                                target: self,
+                                action: "didCancel")
     }
 
-
-    // UITableViewDataSource
+    
+    func didCancel() {
+        self.delegate?.cancelledFilterPostings(self)
+    }
+    
+    
+    // UITableViewDataSource and Delegate
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2
+    }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 1 {
+        if section == 0 {
             return 1
         }
         else {
@@ -55,9 +71,36 @@ class SCFilterPostingController: UITableViewController {
                                                                 forIndexPath: indexPath) as UITableViewCell
         
         
-        cell.textLabel!.text = "Here is a cell"
+        if indexPath.section == 0 {
+            cell.textLabel!.text = "Only User's Posts"
+        }
+        else {
+            cell.textLabel!.text = categories[indexPath.row].toString()
+        }
 
         return cell
     }
 
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Filter"
+        }
+        else {
+            return "By Categories"
+        }
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if indexPath.section == 0 {
+            var user = SCUserStore.sharedInstance.current!
+            self.delegate?.filteredPostingsWithArray(self,
+                postings: SCPostingStore.sharedInstance.filterByUserId(user.id))
+        }
+        else {
+            var category = categories[indexPath.row]
+            self.delegate?.filteredPostingsWithArray(self,
+                postings: SCPostingStore.sharedInstance.filterByCategory(category))
+        }
+    }
 }

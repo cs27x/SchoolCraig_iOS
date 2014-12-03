@@ -47,8 +47,7 @@ public class SCPostingTableViewDataSource: NSObject, UITableViewDataSource {
 		
 		var postsArray:[SCPosting] = []
 
-		var network = SCLocalNetworkStore(waitTimeInSeconds: 0)
-		var store = SCPostingStore(network: network)
+		var store = SCPostingStore.sharedInstance
 		
 		var callbackCalled = false
 		var success = {() -> () in
