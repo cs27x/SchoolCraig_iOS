@@ -112,10 +112,10 @@ class SCPostingStore: SequenceType {
     }
     
     
-    func filterByUser(user: SCUser) -> Array<SCPosting> {
+    func filterByUserId(string: String) -> Array<SCPosting> {
         return self.allPosts().filter({(var posting) -> Bool in
             // Implement me!
-            return posting.author == user
+            return posting.author.id == string
         })
     }
     
