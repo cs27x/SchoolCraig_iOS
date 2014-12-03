@@ -17,7 +17,10 @@ class SCAPITests: XCTestCase {
              "title": "mytitle",
              "category": ["id": "bd1eb589-f3d6-47c0-92f4-777a5934f610"] as NSDictionary,
              "description": "mydescription",
-             "user": ["email": "email@test.com", "id": "12345"] as NSDictionary,
+             "user": ["email": "email@test.com",
+                      "fname": "John",
+                      "lname": "Doe",
+                      "id": "12345"] as NSDictionary,
              "cost": NSNumber(double:0.1),
              "date": "2014-12-02T03:29:55.838Z" as NSString] as NSDictionary
 
@@ -31,7 +34,7 @@ class SCAPITests: XCTestCase {
     }
     
     func testSerializePosting() {
-        var testuser = SCUser(id: "12345", email: "email")
+        var testuser = SCUser(id: "12345", firstName: "John", lastName: "Doe", email: "email")
         var testvar = SCPosting(id: "myid",
                                 title: "mytitle",
                                 details: "mydescription",
@@ -50,14 +53,19 @@ class SCAPITests: XCTestCase {
     }
     
     func testParseUser() {
-        var testvar = ["id": "12345", "email": "myemail"] as NSDictionary
+        var testvar = ["id": "12345",
+                       "fname": "John",
+                       "lname": "Doe",
+                       "email": "myemail"] as NSDictionary
         var user = SCAPI.parseUser(testvar)
         XCTAssertEqual("myemail", user.email, "email does not match")
     }
 
     func testSerializeUser() {
-        var testuser = SCUser(email: "myemail")
+        var testuser = SCUser(id: "123", firstName: "John", lastName: "Doe", email: "myemail")
         var json = SCAPI.serializeUser(testuser) as NSDictionary
+        XCTAssertEqual("John", json["fname"] as String)
+        XCTAssertEqual("Doe", json["lname"] as String)
         XCTAssertEqual("myemail", json["email"] as NSString, "email does not match")
     }
 }

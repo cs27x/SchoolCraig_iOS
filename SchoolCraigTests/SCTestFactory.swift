@@ -14,7 +14,10 @@ class SCTestFactory {
         return SCPosting(id: id,
                          title: "Test Posting",
                          details: "Here is a description of a posting.",
-                         author: SCUser(email: "test@test.com"),
+                         author: SCUser(id: "123",
+                                        firstName: "John",
+                                        lastName: "Doe",
+                                        email: "test@test.com"),
                          category: SCCategory.Kitchen,
                          price: 45,
                          creationDate: NSDate())

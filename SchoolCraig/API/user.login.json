@@ -1,8 +1,8 @@
 {
     "data": {
         "id": "12345",
-        "fName": "Brendan",
-        "lName": "McNamara",
+        "fname": "Brendan",
+        "lname": "McNamara",
         "email": "brendan.d.mcnamara@vanderbilt.edu"
     }
 }
