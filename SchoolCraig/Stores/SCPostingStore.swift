@@ -107,9 +107,7 @@ class SCPostingStore: SequenceType {
     func filterByCategory(category: SCCategory) -> Array<SCPosting> {
         return self.allPosts().filter({(var posting) -> Bool in
             // Implement me!
-            
-            
-            return false
+            return posting.category==category
         })
     }
     
