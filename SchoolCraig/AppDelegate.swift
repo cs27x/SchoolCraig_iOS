@@ -26,10 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print(error)
         }
         
-        SCUserStore.sharedInstance.login(email: "brendan.d.mcnamara@vanderbilt.edu",
-                                         password: "password",
-                                         success: success,
-                                         error: error)
+        SCUserStore.sharedInstance.createUser(firstName: "Brendan",
+                                              lastName: "McNamara",
+                                              email: "vandyapps@gmail.com",
+                                              password: "password",
+                                              success: success,
+                                              error: error)
         
 
         

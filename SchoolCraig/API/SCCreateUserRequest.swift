@@ -35,7 +35,10 @@ class SCCreateUserRequest: SCNetworkRequest {
     
     
     func body() -> NSDictionary? {
-        return nil
+        return ["fname": firstName as NSString,
+                "lname": lastName as NSString,
+                "email": email as NSString,
+                "password": password as NSString] as NSDictionary
     }
     
     

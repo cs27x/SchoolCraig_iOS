@@ -22,7 +22,6 @@ enum SCCategory: String {
             return "Electronics"
         case .Kitchen:
             return "Kitchen"
-        
         default:
             fatalError("Unknown Category type for toString method")
         }
