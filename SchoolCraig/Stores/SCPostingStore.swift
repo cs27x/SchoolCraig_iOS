@@ -60,6 +60,26 @@ class SCPostingStore: SequenceType {
     }
     
     
+    func deletePosting(posting: SCPosting, success: () -> (), error: (NSError) -> ()) -> () {
+        
+        if let hashPosting = self.posts[posting.id] {
+            var request = SCDeletePostingRequest(posting: posting)
+            request.onSuccess = {(var arr) -> () in
+                // Remove posting from the list.
+                self.posts[posting.id] = nil
+                success()
+            }
+            request.onError = {(var errorObj) -> () in
+                error(errorObj)
+            }
+        }
+        else {
+            // Trying to delete a posting that is not in the store.
+            error(NSError())
+        }
+    }
+    
+    
     func fetchPosts(#success: () -> (), error: (NSError) -> ()) {
         var request = SCAllPostingsRequest()
         
@@ -104,6 +124,7 @@ class SCPostingStore: SequenceType {
         return allPosts
     }
     
+    
     func filterByCategory(category: SCCategory) -> Array<SCPosting> {
         return self.allPosts().filter({(var posting) -> Bool in
             // Implement me!
@@ -118,6 +139,7 @@ class SCPostingStore: SequenceType {
             return posting.author.id == string
         })
     }
+    
     
     func count() -> Int {
         return countElements(posts)

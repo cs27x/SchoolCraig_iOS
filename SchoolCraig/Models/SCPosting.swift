@@ -41,7 +41,6 @@ class SCPosting: Equatable {
             self.creationDate = creationDate
         }
     
-    
 }
 
 
