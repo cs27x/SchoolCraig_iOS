@@ -14,16 +14,10 @@ class SCRequestTests: XCTestCase {
     func testLoginRequest() {
         var callbackIsCalled = false;
         var request = SCLoginRequest(email: "brendan.d.mcnamara@vanderbilt.edu",
-            password: "password")
+                                     password: "password")
         
         request.onSuccess = {(var userArray) -> () in
             callbackIsCalled = true;
-            if let _userArray = userArray {
-                XCTAssertEqual(1, countElements(_userArray), "Array should contain 1 user")
-            }
-            else {
-                XCTFail("Array optional from login request should not be nil optional")
-            }
         }
         
         request.onError = {(var error) -> () in
@@ -68,7 +62,10 @@ class SCRequestTests: XCTestCase {
         var newPosting = SCPosting(id: "ABCDEFG",
             title: "Fridgerator",
             details: "Graduating next year and would like to sell my fridge.",
-            author: SCUser(email: "brendan.d.mcnamara@vanderbilt.edu"),
+            author: SCUser(id: "123",
+                           firstName: "John",
+                           lastName: "Doe",
+                           email: "brendan.d.mcnamara@vanderbilt.edu"),
             category: SCCategory.Kitchen,
             price: 20.2,
             creationDate: NSDate()

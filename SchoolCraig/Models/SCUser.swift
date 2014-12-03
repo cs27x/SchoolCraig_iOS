@@ -14,12 +14,14 @@ class SCUser: Equatable {
 
     var email: String
     
-    init(id: String, email: String) {
-        self.id = id
-        self.email = email
-    }
+    var firstName: String
     
-    init(email: String) {
+    var lastName: String
+    
+    init(id: String, firstName: String, lastName: String, email: String) {
+        self.id = id
+        self.firstName = firstName
+        self.lastName = lastName
         self.email = email
     }
     

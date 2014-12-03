@@ -14,9 +14,9 @@ class SCLoginRequest: SCNetworkRequest {
     
     var password: String
     
-    var method = SCNetworkMethod.GET
+    var method = SCNetworkMethod.POST
     
-    var path = "/user/login"
+    var path = "/user/auth"
     
     var onSuccess: ((Array<SCUser>?) -> ())?
     
@@ -28,8 +28,13 @@ class SCLoginRequest: SCNetworkRequest {
     }
     
     
+    func body() -> NSDictionary? {
+        return ["email": self.email as NSString,
+                "password": self.password as NSString] as NSDictionary
+    }
+    
+    
     func parse(json: AnyObject) -> SCUser {
-//        return SCUser(email: json["email"] as String)
         return SCAPI.parseUser(json)
     }
     
@@ -42,8 +47,6 @@ class SCLoginRequest: SCNetworkRequest {
     
     
     func serialize(object: SCUser) -> AnyObject {
-        // TODO: Implement me!
-//        return []
         return SCAPI.serializeUser(object);
     }
     

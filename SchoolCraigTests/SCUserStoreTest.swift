@@ -15,7 +15,10 @@ class SCUserStoreTest: XCTestCase {
         var store = SCUserStore(network: SCLocalNetworkStore(waitTimeInSeconds: 0))
         XCTAssertEqual(0, store.count(),
                        "The user store should have no users before adding users.")
-        store.add(SCUser(email: "brendan.d.mcnamara@vanderbilt.edu"))
+        store.add(SCUser(id: "123",
+                         firstName: "Brendan",
+                         lastName: "McNamara",
+                         email: "brendan.d.mcnamara@vanderbilt.edu"))
         
         XCTAssertEqual(1, store.count(),
                        "The user store should have 1 user after adding the user.")
@@ -26,8 +29,8 @@ class SCUserStoreTest: XCTestCase {
     func testIteration() {
         var store = SCUserStore(network:SCLocalNetworkStore(waitTimeInSeconds: 0))
         
-        var user1 = SCUser(email: "user1@test.com")
-        var user2 = SCUser(email: "user2@test.com")
+        var user1 = SCUser(id: "123", firstName: "John", lastName: "Doe", email: "user1@test.com")
+        var user2 = SCUser(id: "124", firstName: "Bob", lastName: "Hope", email: "user2@test.com")
         
         store.add(user1)
         store.add(user2)
@@ -53,31 +56,6 @@ class SCUserStoreTest: XCTestCase {
         XCTAssertTrue(didIterateUser2, "Never iterated user 2.")
         
     }
-    
-
-    func testLogin() {
-        var network = SCLocalNetworkStore(waitTimeInSeconds: 0)
-        var store = SCUserStore(network: network)
-        
-        var didExecuteCallback = false
-        
-        var success = {() -> () in
-            didExecuteCallback = true
-            XCTAssertTrue(network.didCall(endpoint: "/user/login", method: SCNetworkMethod.GET),
-                          "Never logged in the user through network.")
-            XCTAssertNotNil(store.current, "The current user was never set for the store.")
-        
-        }
-        var error = {(var error: NSError) -> () in
-            didExecuteCallback = true
-            XCTFail("Login resulted in an error")
-        }
-        
-        store.login(email: "brendan.d.mcnamara@vanderbilt.edu", password: "password",
-                    success: success, error: error)
-        
-        XCTAssertTrue(didExecuteCallback, "Never executed any callback for login.")
-    }
 
     
     func testCreateUser() {
@@ -91,15 +69,18 @@ class SCUserStoreTest: XCTestCase {
             XCTAssertTrue(network.didCall(endpoint: "/user", method: SCNetworkMethod.POST),
                           "Did not call network for creating a user.")
             
-            XCTAssertEqual(1, store.count(), "Should have a user after creating one")
         }
         var error = {(var error: NSError) -> () in
             didExecuteCallback = true
             XCTFail("Creating user produced error.")
         }
 
-        store.createUser(user: SCUser(email: "user@test.com"), password: "password",
-                         success: success, error: error)
+        store.createUser(firstName: "John",
+                         lastName: "Doe",
+                         email: "user@test.com",
+                         password: "password",
+                         success: success,
+                         error: error)
         
         XCTAssertTrue(didExecuteCallback, "store did not execute callback for createUser.")
     }

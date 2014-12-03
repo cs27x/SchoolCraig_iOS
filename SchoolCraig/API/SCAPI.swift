@@ -22,7 +22,10 @@ class SCAPI {
         var details = json["description"] as String
         
         var userObj = json["user"] as NSDictionary
-        var author = SCUser(id: userObj["id"] as String, email: userObj["email"] as String)
+        var author = SCUser(id: userObj["id"] as String,
+                            firstName: userObj["fname"] as String,
+                            lastName: userObj["lname"] as String,
+                            email: userObj["email"] as String)
         var price = (json["cost"] as NSNumber).doubleValue
         var date = dateFormatter.dateFromString(json["date"] as String)
         
@@ -38,6 +41,11 @@ class SCAPI {
     //serializePosting
     //Takes fields of SCPosting object and converts to JSON
     class func serializePosting(object: SCPosting) -> AnyObject {
+        // TODO (brendan): Use this date formatter for the date,
+        // don't use the timestamp.
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
+        
         var id = object.id
         var title = object.title
         var category = NSString(string: object.category.rawValue)
@@ -58,14 +66,19 @@ class SCAPI {
     //parseUser
     //Takes in JSON and marshalls data into SCUser object
     class func parseUser(json: AnyObject) -> SCUser {
-        return SCUser(id: json["id"] as String, email: json["email"] as String)
+        return SCUser(id: json["id"] as String,
+                      firstName: json["fname"] as String,
+                      lastName: json["lname"] as String,
+                      email: json["email"] as String)
     }
     
     //serializeUser
     //Takes fields of SCUser object and converts to JSON
     class func serializeUser(object: SCUser) -> AnyObject {
         var email = object.email
-        return ["email": email] as NSDictionary
+        var fName = object.firstName
+        var lName = object.lastName
+        return ["email": email, "fname": fName, "lname": lName] as NSDictionary
     }
     
 }

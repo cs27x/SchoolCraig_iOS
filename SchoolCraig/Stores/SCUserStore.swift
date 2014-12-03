@@ -43,7 +43,7 @@ class SCUserStore: SequenceType {
                 static var token : dispatch_once_t = 0
             }
             dispatch_once(&Static.token) {
-                Static.instance = SCUserStore(network: SCLocalNetworkStore(waitTimeInSeconds: 1))
+                Static.instance = SCUserStore(network: SCNetworkStore.sharedInstance)
             }
             return Static.instance!
         }
@@ -97,17 +97,22 @@ class SCUserStore: SequenceType {
     }
     
 
-    func createUser(#user: SCUser, password: String, success: () -> (), error: (NSError) -> ()) {
+    func createUser(#firstName: String,
+                     lastName: String,
+                     email: String,
+                     password: String,
+                     success: () -> (),
+                     error: (NSError) -> ()) {
+
         // TODO: Implement me!
         
         // Use the create user request.
-        var request = SCCreateUserRequest(user: user, password: password)
+        var request = SCCreateUserRequest(firstName: firstName,
+                                          lastName: lastName,
+                                          email: email,
+                                          password: password)
         
         request.onSuccess = {(var userArray) -> () in
-            // Append the current user to the users Array
-            self.users.append(user)
-                
-            // call the success callback
             success()
         }
         

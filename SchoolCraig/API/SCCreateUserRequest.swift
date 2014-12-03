@@ -10,7 +10,11 @@ import UIKit
 
 class SCCreateUserRequest: SCNetworkRequest {
     
-    var user: SCUser
+    var firstName: String
+    
+    var lastName: String
+    
+    var email: String
     
     var password: String
    
@@ -22,10 +26,18 @@ class SCCreateUserRequest: SCNetworkRequest {
     
     var onError: ((NSError) -> ())?
     
-    init(user: SCUser, password: String) {
-        self.user = user
+    init(firstName: String, lastName: String, email: String, password: String) {
+        self.firstName = firstName
+        self.lastName = lastName
+        self.email = email
         self.password = password
     }
+    
+    
+    func body() -> NSDictionary? {
+        return nil
+    }
+    
     
     func parse(json: AnyObject) -> SCUser {
         return SCAPI.parseUser(json)
