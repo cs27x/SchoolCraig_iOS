@@ -36,7 +36,14 @@ class SCPostingTableViewController: UIViewController, UITableViewDelegate {
 	}
 	
 	func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
-		println("You selected cell #\(indexPath.row)!")
+		var post = self.datasource!.items[indexPath.row] as SCPosting
+		
+		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+		let vc = storyboard.instantiateViewControllerWithIdentifier("PostingDetailView") as SCPostingDetailViewController
+		vc.post = post
+		self.navigationController?.pushViewController(vc, animated: true)
+		self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+	
 	}
 	
 	func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

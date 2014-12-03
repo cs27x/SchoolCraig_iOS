@@ -51,6 +51,9 @@ class SCLoginViewController: UIViewController {
 				
 			}
 			var error = {(var error: NSError) -> () in
+				sender.userInteractionEnabled = true
+				sender.setTitle("LOGIN", forState: .Normal)
+				
 				var alertView = UIAlertView()
 				alertView.addButtonWithTitle("OK")
 				alertView.title = "Login Failed"
@@ -60,6 +63,9 @@ class SCLoginViewController: UIViewController {
 			
 			store.login(email: usernameField.text, password: passwordField.text,
 				success: success, error: error)
+			
+			//uncomment to skip to the posting screen
+			//self.performSegueWithIdentifier("LoggedIn", sender: self)
 		}
 	}
 	

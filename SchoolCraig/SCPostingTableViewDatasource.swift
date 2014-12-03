@@ -36,7 +36,7 @@ public class SCPostingTableViewDataSource: NSObject, UITableViewDataSource {
 			//cell = SCPostingTableViewCell(style: UITableViewCellStyle.Custom, reuseIdentifier: cellIdentifier)
 		}
 		
-		var post = items[indexPath.row] as SCPosting;
+		var post = items[indexPath.row] as SCPosting
 		
 		cell!.updateCellWithPost(post)
 
