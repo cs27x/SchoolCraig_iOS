@@ -11,11 +11,11 @@ import UIKit
 
 class SCRegistrationViewController: UIViewController {
 	
-	@IBOutlet var emailField: UITextField!
-	@IBOutlet var confirmPasswordField: UITextField!
-	@IBOutlet var passwordField: UITextField!
 	@IBOutlet var firstNameField: UITextField!
+	@IBOutlet var emailField: UITextField!
+	@IBOutlet var passwordField: UITextField!
 	@IBOutlet var lastNameField: UITextField!
+	@IBOutlet var confirmPasswordField: UITextField!
 	
 	required init(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
