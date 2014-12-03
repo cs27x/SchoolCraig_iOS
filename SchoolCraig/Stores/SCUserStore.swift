@@ -67,7 +67,7 @@ class SCUserStore: SequenceType {
         // Use the login request.
         // Set the current user property.
         var request = SCLoginRequest(email: email,
-            password: password)
+                                     password: password)
         
         request.onSuccess = {(var userArray) -> () in
             if let _userArray = userArray {
@@ -86,10 +86,9 @@ class SCUserStore: SequenceType {
             }
         }
         
-        request.onError = {(var error) -> () in
+        request.onError = {(var errorObj) -> () in
             // call the failure callback
-            // TODO: Implement me later!
-            // error(NSError())
+            error(errorObj)
         }
         
         // handle the request using the network store.
@@ -116,10 +115,9 @@ class SCUserStore: SequenceType {
             success()
         }
         
-        request.onError = {(var error) -> () in
+        request.onError = {(var errorObj) -> () in
             // call the failure callback
-            // TODO: Implement me later!
-            //error(NSError())
+            error(errorObj)
         }
         
         // handle the request using the network store.

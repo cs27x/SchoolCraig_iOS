@@ -35,6 +35,19 @@ class SCPostingTableViewController: UIViewController, UITableViewDelegate {
 		
 	}
 	
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("FilterPostingView") as SCFilterPostingController
+        
+        self.presentViewController(UINavigationController(rootViewController: vc),
+                                   animated: true,
+                                   completion: nil)
+        
+    }
+    
+    
 	func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
 		var post = self.datasource!.items[indexPath.row] as SCPosting
 		
