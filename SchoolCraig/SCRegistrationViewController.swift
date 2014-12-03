@@ -48,8 +48,11 @@ class SCRegistrationViewController: UIViewController {
 				alertView.show()
 			}
 			
-			store.createUser(user: SCUser(email: emailField.text), password: passwordField.text,
-				success: success, error: error)
+            // TODO: Fix this!
+            store.createUser(firstName: "",
+                             lastName: "",
+                             email: emailField.text,
+                             password: passwordField.text, success: success, error: error)
 		}
 	}
 	
