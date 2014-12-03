@@ -115,7 +115,10 @@ class SCPostingStore: SequenceType {
     
     
     func filterByUser(user: SCUser) -> Array<SCPosting> {
-    
+        return self.allPosts().filter({(var posting) -> Bool in
+            // Implement me!
+            return posting.author == user
+        })
     }
     
     func count() -> Int {
