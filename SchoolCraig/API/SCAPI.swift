@@ -50,7 +50,7 @@ class SCAPI {
         var title = object.title
         var category = NSString(string: object.category.rawValue)
         var details = object.details
-        var authorId = object.author.id! as NSString
+        var authorId = object.author.id as NSString
         var cost = NSNumber(double:object.price)
         var timestamp = NSNumber(integer: Int(object.creationDate.timeIntervalSince1970))
         

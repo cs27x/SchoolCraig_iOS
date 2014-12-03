@@ -10,7 +10,7 @@ import UIKit
 
 class SCUser: Equatable {
     
-    var id: String?
+    var id: String
 
     var email: String
     
@@ -25,14 +25,9 @@ class SCUser: Equatable {
         self.email = email
     }
     
-    // Check if this is a new user.
-    func isNew() -> Bool {
-        return self.id == nil
-    }
-    
 
 }
 
 func == (user1: SCUser, user2: SCUser) -> Bool {
-    return user1.email == user2.email
+    return user1.id == user2.id
 }
