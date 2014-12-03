@@ -21,6 +21,21 @@ class SCPostingStoreTest: XCTestCase {
         XCTAssertEqual(1, store.count(), "Incorrect number of postings in the store.")
         XCTAssertEqual(posting, store[posting.id]!, "Posting should be added to the store.")
     }
+    
+    func testFilterByCategory() {
+        var network = SCLocalNetworkStore(waitTimeInSeconds: 0)
+        var store = SCPostingStore(network: network)
+        
+        var success = {() -> () in
+            XCTAssertNotNil(store.filterByCategory(SCCategory.Electronics), "Posting with category id should exist");
+        }
+        
+        var error = {(var error: NSError) -> () in
+            XCTFail("Fetching post failed with error.")
+        }
+        
+        store.fetchPosts(success: success, error: error)
+    }
 
     
     func testIteration() {
