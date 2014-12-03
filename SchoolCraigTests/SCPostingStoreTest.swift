@@ -27,7 +27,7 @@ class SCPostingStoreTest: XCTestCase {
         var store = SCPostingStore(network: network)
         
         var success = {() -> () in
-            XCTAssertNotNil(store.filterByCategory(SCCategory.Electronics), "Posting with category id should exist");
+            XCTAssertNotNil(store.filterByCategory(SCCategory.Kitchen), "Posting with category Kitchen should exist");
         }
         
         var error = {(var error: NSError) -> () in
