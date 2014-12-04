@@ -52,6 +52,7 @@ public class SCPostingTableViewDataSource: NSObject, UITableViewDataSource {
 		var callbackCalled = false
 		var success = {() -> () in
 			postsArray = store.allPosts()
+			NSNotificationCenter.defaultCenter().postNotificationName("DatasourceUpdated", object: nil)
 		}
 		
 		var error = {(var error: NSError) -> () in
@@ -61,6 +62,11 @@ public class SCPostingTableViewDataSource: NSObject, UITableViewDataSource {
 		store.fetchPosts(success: success, error: error)
 		
 		return postsArray
+	}
+	
+	public func updateDatasourceWithItems(items: NSArray) {
+		self.items = items
+		NSNotificationCenter.defaultCenter().postNotificationName("DatasourceUpdated", object: nil)
 	}
 	
 }

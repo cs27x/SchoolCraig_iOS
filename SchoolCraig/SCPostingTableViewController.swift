@@ -25,17 +25,37 @@ class SCPostingTableViewController: UIViewController, UITableViewDelegate, SCFil
 		
 		//self.tableView.registerClass(SCPostingTableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
 		
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "refreshView:", name:"DatasourceUpdated", object: nil)
+		
 		var nipName=UINib(nibName: "SCPostingTableViewCell", bundle:nil)
 		self.tableView.registerNib(nipName, forCellReuseIdentifier: reuseIdentifier)
 		
 		tableView.delegate = self
 		self.datasource = SCPostingTableViewDataSource(cellIdentifier: reuseIdentifier)
 		tableView.dataSource = self.datasource
+		
+		let myFirstButton = UIButton()
+		myFirstButton.setTitle("Filter", forState: .Normal)
+		myFirstButton.setTitleColor(UIColor.blueColor(), forState: .Normal)
+		myFirstButton.frame = CGRectMake(0, 0, 300, 30)
+		myFirstButton.addTarget(self, action: "filterPressed:", forControlEvents: .TouchUpInside)
+
+		self.tableView.tableHeaderView = myFirstButton
 	
 		
 	}
-    
-    
+	
+	func filterPressed(sender: UIButton!) {
+		var filterViewController = SCFilterPostingController()
+		filterViewController.delegate = self
+		var navController = UINavigationController(rootViewController: filterViewController)
+		self.presentViewController(navController, animated: true, completion: nil)
+	}
+	
+	func refreshView(notification: NSNotification){
+		self.tableView.reloadData()
+	}
+	
 	func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
 		var post = self.datasource!.items[indexPath.row] as SCPosting
 		
@@ -50,5 +70,13 @@ class SCPostingTableViewController: UIViewController, UITableViewDelegate, SCFil
 	func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 		return 150
 	}
-    
+	
+	func cancelledFilterPostings(controller: SCFilterPostingController) {
+		self.dismissViewControllerAnimated(true, completion: nil)
+	}
+	
+	func filteredPostingsWithArray(controller: SCFilterPostingController, postings: Array<SCPosting>) -> () {
+		self.datasource!.updateDatasourceWithItems(postings)
+	}
+	
 }

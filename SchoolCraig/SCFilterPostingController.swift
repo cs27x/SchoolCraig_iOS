@@ -51,14 +51,13 @@ class SCFilterPostingController: UITableViewController {
     // UITableViewDataSource and Delegate
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
+        if section <= 1 {
             return 1
-        }
-        else {
+		} else {
             return countElements(categories)
         }
     }
@@ -72,9 +71,10 @@ class SCFilterPostingController: UITableViewController {
         
         
         if indexPath.section == 0 {
-            cell.textLabel!.text = "Only User's Posts"
-        }
-        else {
+			cell.textLabel!.text = "Remove All Filters"
+		} else if indexPath.section == 1 {
+			cell.textLabel!.text = "Only User's Posts"
+		} else {
             cell.textLabel!.text = categories[indexPath.row].toString()
         }
 
@@ -83,16 +83,19 @@ class SCFilterPostingController: UITableViewController {
 
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
-            return "Filter"
-        }
-        else {
+			return "Clear Filters"
+		} else if section == 1 {
+			return "Filter"
+		} else {
             return "By Categories"
         }
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        if indexPath.section == 0 {
+		if indexPath.section == 0 {
+			self.delegate?.filteredPostingsWithArray(self,
+				postings: SCPostingStore.sharedInstance.allPosts())
+		} else if indexPath.section == 1 {
             var user = SCUserStore.sharedInstance.current!
             self.delegate?.filteredPostingsWithArray(self,
                 postings: SCPostingStore.sharedInstance.filterByUserId(user.id))
