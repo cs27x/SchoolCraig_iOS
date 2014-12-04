@@ -64,7 +64,7 @@ class SCLoginViewController: UIViewController {
 				success: success, error: error)
 			
 //			uncomment to skip to the posting screen
-			self.performSegueWithIdentifier("LoggedIn", sender: self)
+	//		self.performSegueWithIdentifier("LoggedIn", sender: self)
 		}
 	}
 	
