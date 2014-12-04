@@ -71,11 +71,11 @@ class SCFilterPostingController: UITableViewController {
         
         
         if indexPath.section == 0 {
-			cell.textLabel!.text = "Remove All Filters"
+			cell.textLabel.text = "Remove All Filters"
 		} else if indexPath.section == 1 {
-			cell.textLabel!.text = "Only User's Posts"
+			cell.textLabel.text = "Only User's Posts"
 		} else {
-            cell.textLabel!.text = categories[indexPath.row].toString()
+            cell.textLabel.text = categories[indexPath.row].toString()
         }
 
         return cell
