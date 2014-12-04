@@ -50,8 +50,8 @@
 		FC5FED4B1A101060004BD366 /* SCUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5FED491A101034004BD366 /* SCUserStore.swift */; };
 		FC5FED4C1A10194A004BD366 /* SCNetworkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EFB19F9587800AE2AAA /* SCNetworkStore.swift */; };
 		FC5FED4E1A101AC3004BD366 /* SCUserStoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5FED4D1A101AC3004BD366 /* SCUserStoreTest.swift */; };
-		FC6758AA1A2FC42700DE1268 /* SCFilterPostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6758A81A2FC42700DE1268 /* SCFilterPostingController.swift */; };
 		FC6758A71A2FC21400DE1268 /* SCDeletePostingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC99E44E1A2FBF6900BC7BF7 /* SCDeletePostingRequest.swift */; };
+		FC6758AA1A2FC42700DE1268 /* SCFilterPostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6758A81A2FC42700DE1268 /* SCFilterPostingController.swift */; };
 		FC99E44F1A2FBF6900BC7BF7 /* SCDeletePostingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC99E44E1A2FBF6900BC7BF7 /* SCDeletePostingRequest.swift */; };
 		FCB4A7AF19FFF79D00C2EAA3 /* SCLocalNetworkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB4A7AE19FFF79D00C2EAA3 /* SCLocalNetworkStore.swift */; };
 		FCB4A7B119FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB4A7B019FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift */; };
@@ -59,7 +59,6 @@
 		FCC6913019FDCE450016771D /* SCNetworkMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC6912F19FDCE450016771D /* SCNetworkMethod.swift */; };
 		FCF1B4B219FB0CB900C38D83 /* SCAllPostingsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF1B4B119FB0CB900C38D83 /* SCAllPostingsRequest.swift */; };
 		FCF8204319F8B9850015E3A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF8204219F8B9850015E3A6 /* AppDelegate.swift */; };
-		FCF8204519F8B9850015E3A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF8204419F8B9850015E3A6 /* ViewController.swift */; };
 		FCF8204819F8B9850015E3A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCF8204619F8B9850015E3A6 /* Main.storyboard */; };
 		FCF8204A19F8B9850015E3A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCF8204919F8B9850015E3A6 /* Images.xcassets */; };
 		FCF8204D19F8B9850015E3A6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCF8204B19F8B9850015E3A6 /* LaunchScreen.xib */; };
@@ -112,7 +111,6 @@
 		FCF8203D19F8B9850015E3A6 /* SchoolCraig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolCraig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF8204119F8B9850015E3A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCF8204219F8B9850015E3A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FCF8204419F8B9850015E3A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FCF8204719F8B9850015E3A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCF8204919F8B9850015E3A6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FCF8204C19F8B9850015E3A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -223,7 +221,6 @@
 			isa = PBXGroup;
 			children = (
 				FCF8204219F8B9850015E3A6 /* AppDelegate.swift */,
-				FCF8204419F8B9850015E3A6 /* ViewController.swift */,
 				FC5C3EF019F947D200AE2AAA /* API */,
 				FC5C3EEB19F946B200AE2AAA /* Models */,
 				FC5C3EEC19F946BC00AE2AAA /* Views */,
@@ -390,7 +387,6 @@
 				FC2D3A291A1816C500C8BD7B /* SCCreateUserRequest.swift in Sources */,
 				FC29E3291A06988D00F6C144 /* SCLoginRequest.swift in Sources */,
 				025C26A01A041A2000F8EFF9 /* SCPostingTableViewController.swift in Sources */,
-				FCF8204519F8B9850015E3A6 /* ViewController.swift in Sources */,
 				02097D0C1A1A908700549255 /* SCRegistrationViewController.swift in Sources */,
 				025C269E1A04113800F8EFF9 /* SCPostingTableViewDatasource.swift in Sources */,
 				FC29C28619FD72E500BF99BB /* SCUser.swift in Sources */,

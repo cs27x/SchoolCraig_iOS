@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SCPostingTableViewController: UIViewController, UITableViewDelegate   {
+class SCPostingTableViewController: UIViewController, UITableViewDelegate, SCFilterPostingControllerDelegate  {
 	@IBOutlet
 	var tableView: UITableView!
 	
@@ -22,8 +22,6 @@ class SCPostingTableViewController: UIViewController, UITableViewDelegate   {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		var reuseIdentifier = "SCPostingTableViewCell"
-		
-		//self.tableView.registerClass(SCPostingTableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
 		
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: "refreshView:", name:"DatasourceUpdated", object: nil)
 		
