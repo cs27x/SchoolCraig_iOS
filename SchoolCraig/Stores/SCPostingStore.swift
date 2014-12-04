@@ -73,6 +73,7 @@ class SCPostingStore: SequenceType {
             request.onError = {(var errorObj) -> () in
                 error(errorObj)
             }
+            self.network.handleRequest(request)
         }
         else {
             // Trying to delete a posting that is not in the store.

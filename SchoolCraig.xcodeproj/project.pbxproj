@@ -312,6 +312,7 @@
 				TargetAttributes = {
 					FCF8203C19F8B9850015E3A6 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = UTHR9MM5YU;
 					};
 					FCF8205119F8B9850015E3A6 = {
 						CreatedOnToolsVersion = 6.0.1;

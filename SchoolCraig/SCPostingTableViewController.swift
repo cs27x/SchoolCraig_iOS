@@ -9,12 +9,13 @@
 import Foundation
 import UIKit
 
-class SCPostingTableViewController: UIViewController, UITableViewDelegate, SCFilterPostingControllerDelegate  {
+class SCPostingTableViewController: UIViewController, UITableViewDelegate, SCFilterPostingControllerDelegate, SCPostingDetailControllerDelegate  {
 	@IBOutlet
 	var tableView: UITableView!
 	
 	var datasource: SCPostingTableViewDataSource?
 	
+
 	required init(coder aDecoder: NSCoder) {
 	    super.init(coder: aDecoder)
 	}
@@ -60,6 +61,7 @@ class SCPostingTableViewController: UIViewController, UITableViewDelegate, SCFil
 		let storyboard = UIStoryboard(name: "Main", bundle: nil)
 		let vc = storyboard.instantiateViewControllerWithIdentifier("PostingDetailView") as SCPostingDetailViewController
 		vc.post = post
+        vc.delegate = self
 		self.navigationController?.pushViewController(vc, animated: true)
 		self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
 	
@@ -78,4 +80,9 @@ class SCPostingTableViewController: UIViewController, UITableViewDelegate, SCFil
         self.dismissViewControllerAnimated(true, completion: nil)
 	}
 	
+    func didDeletePosting(controller: SCPostingDetailViewController) {
+        tableView.reloadData()
+        var controller = self.navigationController!.popViewControllerAnimated(true)
+   }
 }
+

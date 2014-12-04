@@ -16,7 +16,7 @@ class SCDeletePostingRequest: SCNetworkRequest {
     
     var path: String {
         get {
-            return "/post/" + posting.id
+            return "/post/id/" + posting.id
         }
     }
     
