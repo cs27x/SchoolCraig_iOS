@@ -104,6 +104,21 @@ class SCPostingStore: SequenceType {
         return allPosts
     }
     
+    func filterByCategory(category: SCCategory) -> Array<SCPosting> {
+        return self.allPosts().filter({(var posting) -> Bool in
+            // Implement me!
+            return posting.category==category
+        })
+    }
+    
+    
+    func filterByUserId(string: String) -> Array<SCPosting> {
+        return self.allPosts().filter({(var posting) -> Bool in
+            // Implement me!
+            return posting.author.id == string
+        })
+    }
+    
     func count() -> Int {
         return countElements(posts)
     }

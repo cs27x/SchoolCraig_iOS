@@ -7,9 +7,9 @@
                "cost": 100,
                "title": "Camera",
                "user": {
-                   "id": "d0c1489c-8e88-4079-a4fe-14f1a3d4c885",
-                   "fname": "Violetta",
-                   "lname": "Vylegzhanina",
+                   "id": "d0c1489c-8e88-4079-a4fe-14f1a3d4c886",
+                   "fname": "John",
+                   "lname": "Doe",
                    "email": "violetta.vylegzhanina@vanderbilt.edu"
                 },
                "category": {
@@ -30,8 +30,8 @@
                  "email": "violetta.vylegzhanina@vanderbilt.edu"
                },
                "category": {
-                 "id": "c2d268aa-71ad-44c1-bd9b-14d9c56f2431",
-                 "name": "Electronics"
+                 "id": "bd1eb589-f3d6-47c0-92f4-777a5934f610",
+                 "name": "Kitchen"
                }
              },
              {
