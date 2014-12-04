@@ -34,10 +34,8 @@ class SCNewPostViewController: UIViewController {
 	}
 	@IBAction func submitPressed(sender: UIBarButtonItem) {
 	
-		var network = SCLocalNetworkStore(waitTimeInSeconds: 0)
-		var userStore = SCUserStore(network: network)
-		
-		var postingStore = SCPostingStore(network: network)
+		var userStore = SCUserStore.sharedInstance
+		var postingStore = SCPostingStore.sharedInstance
 		
 		var title = titleField.text
 		var details = descriptionField.text

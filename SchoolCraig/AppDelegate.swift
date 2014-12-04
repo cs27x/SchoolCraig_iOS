@@ -16,23 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
-        var success = {() -> () in
-            print("Success")
-            print(SCUserStore.sharedInstance.current!.email)
-        }
-        
-        var error = {(var error: NSError) -> () in
-            print(error)
-        }
-        
-        SCUserStore.sharedInstance.login(email: "brendan.d.mcnamara@vanderbilt.edu",
-                                         password: "password",
-                                         success: success,
-                                         error: error)
-        
-
-        
         return true
     }
 

@@ -50,6 +50,7 @@
 		FC5FED4B1A101060004BD366 /* SCUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5FED491A101034004BD366 /* SCUserStore.swift */; };
 		FC5FED4C1A10194A004BD366 /* SCNetworkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EFB19F9587800AE2AAA /* SCNetworkStore.swift */; };
 		FC5FED4E1A101AC3004BD366 /* SCUserStoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5FED4D1A101AC3004BD366 /* SCUserStoreTest.swift */; };
+		FC6758AA1A2FC42700DE1268 /* SCFilterPostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6758A81A2FC42700DE1268 /* SCFilterPostingController.swift */; };
 		FCB4A7AF19FFF79D00C2EAA3 /* SCLocalNetworkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB4A7AE19FFF79D00C2EAA3 /* SCLocalNetworkStore.swift */; };
 		FCB4A7B119FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB4A7B019FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift */; };
 		FCC1700B1A0BE0B300868535 /* SCPostingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC1700A1A0BE0B300868535 /* SCPostingStore.swift */; };
@@ -99,6 +100,7 @@
 		FC5C3EFB19F9587800AE2AAA /* SCNetworkStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCNetworkStore.swift; path = Stores/SCNetworkStore.swift; sourceTree = "<group>"; };
 		FC5FED491A101034004BD366 /* SCUserStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCUserStore.swift; path = Stores/SCUserStore.swift; sourceTree = "<group>"; };
 		FC5FED4D1A101AC3004BD366 /* SCUserStoreTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCUserStoreTest.swift; sourceTree = "<group>"; };
+		FC6758A81A2FC42700DE1268 /* SCFilterPostingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCFilterPostingController.swift; sourceTree = "<group>"; };
 		FCB4A7AE19FFF79D00C2EAA3 /* SCLocalNetworkStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCLocalNetworkStore.swift; path = Stores/SCLocalNetworkStore.swift; sourceTree = "<group>"; };
 		FCB4A7B019FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCNetworkStoreProtocol.swift; path = API/SCNetworkStoreProtocol.swift; sourceTree = "<group>"; };
 		FCC1700A1A0BE0B300868535 /* SCPostingStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCPostingStore.swift; path = Stores/SCPostingStore.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		FC5C3EED19F946C400AE2AAA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FC6758A81A2FC42700DE1268 /* SCFilterPostingController.swift */,
 				02C224A81A06D4FC00D2C58C /* SCLoginViewController.swift */,
 				02097D091A1A907200549255 /* SCNewPostViewController.swift */,
 				02097D0B1A1A908700549255 /* SCRegistrationViewController.swift */,
@@ -372,6 +375,7 @@
 				FCB4A7AF19FFF79D00C2EAA3 /* SCLocalNetworkStore.swift in Sources */,
 				FCF1B4B219FB0CB900C38D83 /* SCAllPostingsRequest.swift in Sources */,
 				FC5C3EEF19F947C500AE2AAA /* SCPosting.swift in Sources */,
+				FC6758AA1A2FC42700DE1268 /* SCFilterPostingController.swift in Sources */,
 				FC0EBD7C1A06BEE1007C2E1E /* SCCreatePostingRequest.swift in Sources */,
 				FC5FED4A1A101034004BD366 /* SCUserStore.swift in Sources */,
 				0218EB971A2EA21E00777F90 /* SCPostingDetailViewController.swift in Sources */,

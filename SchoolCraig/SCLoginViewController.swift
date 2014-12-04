@@ -30,8 +30,7 @@ class SCLoginViewController: UIViewController {
 			sender.userInteractionEnabled = false;
 			sender.setTitle("Logging in....", forState: .Normal)
 			
-			var network = SCLocalNetworkStore(waitTimeInSeconds: 0)
-			var store = SCUserStore(network: network)
+			var store = SCUserStore.sharedInstance
 			
 			var success = {() -> () in
 				

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SCPostingTableViewController: UIViewController, UITableViewDelegate {
+class SCPostingTableViewController: UIViewController, UITableViewDelegate, SCFilterPostingControllerDelegate {
 	@IBOutlet
 	var tableView: UITableView!
 	
@@ -34,7 +34,8 @@ class SCPostingTableViewController: UIViewController, UITableViewDelegate {
 	
 		
 	}
-	
+    
+    
 	func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
 		var post = self.datasource!.items[indexPath.row] as SCPosting
 		
@@ -49,4 +50,5 @@ class SCPostingTableViewController: UIViewController, UITableViewDelegate {
 	func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 		return 150
 	}
+    
 }
