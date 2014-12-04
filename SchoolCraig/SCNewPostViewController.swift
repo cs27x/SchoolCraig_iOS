@@ -51,6 +51,9 @@ class SCNewPostViewController: UIViewController {
 		
 		var success = {() -> () in
 			self.dismissViewControllerAnimated(true, completion:nil)
+			
+			SCPostingTableViewDataSource.sharedInstance.getAllPosts()
+			NSNotificationCenter.defaultCenter().postNotificationName("DatasourceUpdated", object: nil)
 		}
 		
 		var error = {(var error: NSError) -> () in

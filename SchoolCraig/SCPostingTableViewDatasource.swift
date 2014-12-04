@@ -22,6 +22,19 @@ public class SCPostingTableViewDataSource: NSObject, UITableViewDataSource {
 	
 	}
 	
+	class var sharedInstance: SCPostingTableViewDataSource {
+		get {
+			struct Static {
+				static var instance : SCPostingTableViewDataSource? = nil
+				static var token : dispatch_once_t = 0
+			}
+			dispatch_once(&Static.token) {
+				Static.instance = SCPostingTableViewDataSource(cellIdentifier: "SCPostingTableViewCell")
+			}
+			return Static.instance!
+		}
+	}
+	
 	public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return items.count
 	}

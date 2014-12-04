@@ -30,7 +30,7 @@ class SCPostingTableViewController: UIViewController, UITableViewDelegate, SCFil
 		self.tableView.registerNib(nipName, forCellReuseIdentifier: reuseIdentifier)
 		
 		tableView.delegate = self
-		self.datasource = SCPostingTableViewDataSource(cellIdentifier: reuseIdentifier)
+		self.datasource = SCPostingTableViewDataSource.sharedInstance
 		tableView.dataSource = self.datasource
 		
 		let myFirstButton = UIButton()
