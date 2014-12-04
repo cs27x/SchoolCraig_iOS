@@ -11,15 +11,14 @@ import UIKit
 
 public class SCPostingTableViewDataSource: NSObject, UITableViewDataSource {
 	
-	var items:[AnyObject]
+	var items:[AnyObject] = []
 	var cellIdentifier: String
 	
 	init(cellIdentifier: String!) {
 		
 		self.cellIdentifier = cellIdentifier
-		self.items = []
 		super.init()
-		self.items = getAllPosts()
+		getAllPosts()
 	
 	}
 	
@@ -43,7 +42,7 @@ public class SCPostingTableViewDataSource: NSObject, UITableViewDataSource {
 		return cell!
 	}
 	
-	public func getAllPosts() -> NSArray {
+	public func getAllPosts() {
 		
 		var postsArray:[SCPosting] = []
 
@@ -51,7 +50,7 @@ public class SCPostingTableViewDataSource: NSObject, UITableViewDataSource {
 		
 		var callbackCalled = false
 		var success = {() -> () in
-			postsArray = store.allPosts()
+			self.items = store.allPosts()
 			NSNotificationCenter.defaultCenter().postNotificationName("DatasourceUpdated", object: nil)
 		}
 		
@@ -59,9 +58,7 @@ public class SCPostingTableViewDataSource: NSObject, UITableViewDataSource {
 			print(error)
 		}
 		
-		store.fetchPosts(success: success, error: error)
-		
-		return postsArray
+		store.fetchPosts(success: success, error: error)		
 	}
 	
 	public func updateDatasourceWithItems(items: NSArray) {

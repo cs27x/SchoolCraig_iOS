@@ -77,6 +77,7 @@ class SCPostingTableViewController: UIViewController, UITableViewDelegate, SCFil
 	
 	func filteredPostingsWithArray(controller: SCFilterPostingController, postings: Array<SCPosting>) -> () {
 		self.datasource!.updateDatasourceWithItems(postings)
+        self.dismissViewControllerAnimated(true, completion: nil)
 	}
 	
 }
