@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NLs-Xf-ZDJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NLs-Xf-ZDJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -87,11 +87,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="confirmPasswordField" destination="57e-O8-GdY" id="a7n-kA-XPB"/>
-                        <outlet property="emailField" destination="caU-pi-owJ" id="C3L-qf-ZRj"/>
-                        <outlet property="firstNameField" destination="TMx-TL-iJi" id="5CA-Hh-YwE"/>
-                        <outlet property="lastNameField" destination="UHq-ZX-qh2" id="2fs-z1-cVO"/>
-                        <outlet property="passwordField" destination="4Q2-Oz-rs0" id="bQE-gZ-pK0"/>
+                        <outlet property="confirmPasswordField" destination="UHq-ZX-qh2" id="Sbi-gV-AU6"/>
+                        <outlet property="emailField" destination="57e-O8-GdY" id="cLH-h2-ttU"/>
+                        <outlet property="firstNameField" destination="caU-pi-owJ" id="5pe-C2-mq3"/>
+                        <outlet property="lastNameField" destination="4Q2-Oz-rs0" id="dId-j4-Xrn"/>
+                        <outlet property="passwordField" destination="TMx-TL-iJi" id="CEo-kD-Kds"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O23-cH-Fct" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -377,7 +377,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FM8-jc-fG8">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FM8-jc-fG8">
                                 <rect key="frame" x="181" y="106" width="238" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
