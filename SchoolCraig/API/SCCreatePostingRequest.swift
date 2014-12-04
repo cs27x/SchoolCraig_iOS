@@ -26,7 +26,11 @@ class SCCreatePostingRequest: SCNetworkRequest {
     
     
     func body() -> NSDictionary? {
-        return nil
+        return ["title": posting.title as NSString,
+                "description": posting.details as NSString,
+                "user_id": posting.author.id,
+                "category_id": posting.category.rawValue as NSString,
+                "cost": posting.price as NSNumber] as NSDictionary
     }
     
     func serialize(object: SCPosting) -> AnyObject {

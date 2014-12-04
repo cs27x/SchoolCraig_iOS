@@ -47,12 +47,13 @@ class SCPostingStore: SequenceType {
                 static var token : dispatch_once_t = 0
             }
             dispatch_once(&Static.token) {
-                Static.instance = SCPostingStore(network: SCLocalNetworkStore(waitTimeInSeconds: 1))
+                Static.instance = SCPostingStore(network: SCNetworkStore.sharedInstance)
             }
             return Static.instance!
         }
     }
     
+    var newPosts: Array<SCPosting> = []
     var posts: Dictionary<String, SCPosting> = Dictionary<String, SCPosting>()
     
     init(network: SCNetworkStoreProtocol) {
@@ -84,6 +85,9 @@ class SCPostingStore: SequenceType {
         var request = SCAllPostingsRequest()
         
         request.onSuccess = {(var array: Array<SCPosting>?) -> () in
+            // Remove any postings that are marked as new when fetching.
+            // Clear the array of new posts.
+            self.newPosts = []
             for item in array! {
                 self.add(item)
             }
@@ -102,7 +106,7 @@ class SCPostingStore: SequenceType {
         var request = SCCreatePostingRequest(posting: posting)
         
         request.onSuccess = {(var array: Array<SCPosting>?) -> () in
-            self.add(posting)
+            self.newPosts.append(posting)
             success()
         }
 
@@ -116,10 +120,11 @@ class SCPostingStore: SequenceType {
     
     
     func allPosts() -> Array<SCPosting> {
-        var allPosts = Array<SCPosting>()
+        var allPosts = (posts.values + newPosts)
         
-        for (key, posting) in self.posts {
-            allPosts.append(posting)
+        // Sort posts in reverse chronological ordering.
+        allPosts.sort { (post1, post2) -> Bool in
+            return post1.creationDate.compare(post2.creationDate) == NSComparisonResult.OrderedDescending
         }
         return allPosts
     }
@@ -147,17 +152,26 @@ class SCPostingStore: SequenceType {
     
     
     func add(post: SCPosting) {
+        // Note: This method assumes that you are adding
+        // a post that is NOT new, meaning that it has an
+        // id that is set from the ruby server.
         posts[post.id] = post
     }
     
     
     subscript(id: String) -> SCPosting? {
+        // Check the list of new postings.
+        for posting in self.newPosts {
+            if posting.id == id {
+                return posting
+            }
+        }
         return posts[id]
     }
     
     
     internal func generate() -> SCPostingGenerator {
-        return SCPostingGenerator(items: [SCPosting] (posts.values))
+        return SCPostingGenerator(items: [SCPosting] (allPosts()))
     }
     
     

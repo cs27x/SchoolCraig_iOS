@@ -16,6 +16,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        var postsSuccess = {() -> () in
+            print(SCPostingStore.sharedInstance.allPosts())
+        }
+        
+        var postsError = {(var error: NSError) -> () in
+            print(error)
+        }
+        
+        var loginSuccess = {() -> () in
+            
+            var posting = SCPosting(id: "new",
+                title: "Car",
+                details: "I'm selling my car",
+                author: SCUserStore.sharedInstance.current!,
+                category: SCCategory.Vehicles,
+                price: 1000000000,
+                creationDate: NSDate())
+            SCPostingStore.sharedInstance.createPost(posting, success: postsSuccess, error: postsError)
+        }
+        var loginError = {(var error: NSError) -> () in
+            print(error)
+        }
+        
+        SCUserStore.sharedInstance.login(email: "brendan.d.mcnamara@vanderbilt.edu",
+                                         password: "password",
+                                         success: loginSuccess,
+                                         error: loginError)
         return true
     }
 

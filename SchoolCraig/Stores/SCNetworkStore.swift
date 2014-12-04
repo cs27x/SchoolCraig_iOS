@@ -65,6 +65,12 @@ class SCNetworkStore: SCNetworkStoreProtocol {
             
             
             else {
+                // There is data in the response to serialize.
+                if data?.length == 0 {
+                    // There is no data in the response.
+                    request.onSuccess!(nil)
+                    return
+                }
                 var jsonError: NSError?
                 var json: AnyObject? =
                 NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments, error: &jsonError)
@@ -73,6 +79,7 @@ class SCNetworkStore: SCNetworkStoreProtocol {
                 if let _jsonError = jsonError {
                     request.onError!(_jsonError)
                 }
+                
                     // Check if the json optional is empty
                 else if let _json: AnyObject = json {
                     // Check if this is an array of objects.
