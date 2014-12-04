@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SCPostingTableViewController: UIViewController, UITableViewDelegate, SCFilterPostingControllerDelegate {
+class SCPostingTableViewController: UIViewController, UITableViewDelegate   {
 	@IBOutlet
 	var tableView: UITableView!
 	

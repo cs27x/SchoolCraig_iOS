@@ -51,6 +51,8 @@
 		FC5FED4C1A10194A004BD366 /* SCNetworkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C3EFB19F9587800AE2AAA /* SCNetworkStore.swift */; };
 		FC5FED4E1A101AC3004BD366 /* SCUserStoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5FED4D1A101AC3004BD366 /* SCUserStoreTest.swift */; };
 		FC6758AA1A2FC42700DE1268 /* SCFilterPostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6758A81A2FC42700DE1268 /* SCFilterPostingController.swift */; };
+		FC6758A71A2FC21400DE1268 /* SCDeletePostingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC99E44E1A2FBF6900BC7BF7 /* SCDeletePostingRequest.swift */; };
+		FC99E44F1A2FBF6900BC7BF7 /* SCDeletePostingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC99E44E1A2FBF6900BC7BF7 /* SCDeletePostingRequest.swift */; };
 		FCB4A7AF19FFF79D00C2EAA3 /* SCLocalNetworkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB4A7AE19FFF79D00C2EAA3 /* SCLocalNetworkStore.swift */; };
 		FCB4A7B119FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB4A7B019FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift */; };
 		FCC1700B1A0BE0B300868535 /* SCPostingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC1700A1A0BE0B300868535 /* SCPostingStore.swift */; };
@@ -101,6 +103,7 @@
 		FC5FED491A101034004BD366 /* SCUserStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCUserStore.swift; path = Stores/SCUserStore.swift; sourceTree = "<group>"; };
 		FC5FED4D1A101AC3004BD366 /* SCUserStoreTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCUserStoreTest.swift; sourceTree = "<group>"; };
 		FC6758A81A2FC42700DE1268 /* SCFilterPostingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCFilterPostingController.swift; sourceTree = "<group>"; };
+		FC99E44E1A2FBF6900BC7BF7 /* SCDeletePostingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCDeletePostingRequest.swift; path = API/SCDeletePostingRequest.swift; sourceTree = "<group>"; };
 		FCB4A7AE19FFF79D00C2EAA3 /* SCLocalNetworkStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCLocalNetworkStore.swift; path = Stores/SCLocalNetworkStore.swift; sourceTree = "<group>"; };
 		FCB4A7B019FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCNetworkStoreProtocol.swift; path = API/SCNetworkStoreProtocol.swift; sourceTree = "<group>"; };
 		FCC1700A1A0BE0B300868535 /* SCPostingStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCPostingStore.swift; path = Stores/SCPostingStore.swift; sourceTree = "<group>"; };
@@ -178,6 +181,7 @@
 				FCF1B4B119FB0CB900C38D83 /* SCAllPostingsRequest.swift */,
 				FC29E3281A06988D00F6C144 /* SCLoginRequest.swift */,
 				FC2D3A281A1816C500C8BD7B /* SCCreateUserRequest.swift */,
+				FC99E44E1A2FBF6900BC7BF7 /* SCDeletePostingRequest.swift */,
 				FC470EBF1A01EC8700BBA103 /* post.all.json */,
 				FC29E3261A0693EE00F6C144 /* user.login.json */,
 			);
@@ -381,6 +385,7 @@
 				0218EB971A2EA21E00777F90 /* SCPostingDetailViewController.swift in Sources */,
 				02097D0A1A1A907200549255 /* SCNewPostViewController.swift in Sources */,
 				8E41632F1A06EAD300BA57F8 /* SCAPI.swift in Sources */,
+				FC99E44F1A2FBF6900BC7BF7 /* SCDeletePostingRequest.swift in Sources */,
 				FCB4A7B119FFFA0200C2EAA3 /* SCNetworkStoreProtocol.swift in Sources */,
 				FC2D3A291A1816C500C8BD7B /* SCCreateUserRequest.swift in Sources */,
 				FC29E3291A06988D00F6C144 /* SCLoginRequest.swift in Sources */,
@@ -415,6 +420,7 @@
 				FC3C69971A0FEDBA00E20851 /* SCPostingStore.swift in Sources */,
 				FC0EBD7A1A06B700007C2E1E /* SCNetworkStoreProtocol.swift in Sources */,
 				79B41F5A1A181EBF00B4ACC0 /* SCCreateUserRequest.swift in Sources */,
+				FC6758A71A2FC21400DE1268 /* SCDeletePostingRequest.swift in Sources */,
 				8E41632C1A06E83900BA57F8 /* SCLoginRequest.swift in Sources */,
 				FC3C699A1A0FEDEB00E20851 /* SCTestFactory.swift in Sources */,
 				FC0EBD6F1A06B68B007C2E1E /* SCRequestTests.swift in Sources */,
